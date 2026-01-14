@@ -3,16 +3,40 @@ import { Settings, Wrench, Cpu, Eye } from 'lucide-react';
 
 const Services = () => {
   const services = [
+    // {
+    //   icon: <Settings size={48} />,
+    //   title: 'Material Handling Systems',
+    //   description: 'Complete conveyor and handling solutions for your production line',
+    //   features: [
+    //     'Belt Conveyor Systems',
+    //     'Plastic Modular Conveyors',
+    //     'Slat Conveyors',
+    //     'Chain & Chip Conveyors',
+    //     'Screw Conveyors',
+    //   ],
+    // },
     {
-      icon: <Settings size={48} />,
-      title: 'Material Handling Systems',
-      description: 'Complete conveyor and handling solutions for your production line',
+      icon: <Wrench size={48} />,
+      title: 'Belt Services & Support',
+      description: 'Comprehensive maintenance and support for all belting systems',
       features: [
-        'Belt Conveyor Systems',
-        'Plastic Modular Conveyors',
-        'Slat Conveyors',
-        'Chain & Chip Conveyors',
-        'Screw Conveyors',
+        'Belt Installation',
+        'Maintenance Services',
+        'Repair & Splicing',
+        'Technical Consultation',
+        'Emergency Support',
+      ],
+    },
+     {
+      icon: <Eye size={48} />,
+      title: 'Custom Solutions',
+      description: 'Tailored belting solutions designed for your specific needs',
+      features: [
+        'Custom Belt Design',
+        'Special Coatings',
+        'Cleats & Sidewalls',
+        'Non-standard Sizes',
+        'Industry-specific Solutions',
       ],
     },
     {
@@ -27,30 +51,7 @@ const Services = () => {
         'Custom Automation Solutions',
       ],
     },
-    {
-      icon: <Wrench size={48} />,
-      title: 'Belt Services & Support',
-      description: 'Comprehensive maintenance and support for all belting systems',
-      features: [
-        'Belt Installation',
-        'Maintenance Services',
-        'Repair & Splicing',
-        'Technical Consultation',
-        'Emergency Support',
-      ],
-    },
-    {
-      icon: <Eye size={48} />,
-      title: 'Custom Solutions',
-      description: 'Tailored belting solutions designed for your specific needs',
-      features: [
-        'Custom Belt Design',
-        'Special Coatings',
-        'Cleats & Sidewalls',
-        'Non-standard Sizes',
-        'Industry-specific Solutions',
-      ],
-    },
+   
   ];
 
   return (

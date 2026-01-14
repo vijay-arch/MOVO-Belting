@@ -13,13 +13,13 @@ const Home = () => {
       features: ['Material: PVC, PU, PE', 'Thickness: 0.8-9.0mm', 'Multiple Plies Available'],
     },
     {
-      title: 'Timing Belts & Pulleys',
+      title: 'Conveyor Solutions',
       subtitle: 'Precision Power Transmission',
-      description: 'High-quality timing belts with metric and inch pitches',
+      description: 'High-quality conveyors belts with metric and inch pitches',
       features: ['AT10, AT20, HTD5M, HTD8M', 'Linear or Endless Options', 'Stainless Steel, Kevlar Cords'],
     },
     {
-      title: 'Plastic Modular Belts',
+      title: 'Flexible and Customizable Belting solutions',
       subtitle: 'Advanced Conveying Solutions',
       description: 'Ideal for food and industrial products',
       features: ['Chemical Resistant', 'Minimal Friction', 'Easy Maintenance'],

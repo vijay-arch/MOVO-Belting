@@ -25,15 +25,28 @@ const Contact = () => {
     const contacts = JSON.parse(localStorage.getItem('contacts') || '[]');
     contacts.push({ ...formData, date: new Date().toISOString() });
     localStorage.setItem('contacts', JSON.stringify(contacts));
-    
+
+    // Build a mailto: link so the user's mail client sends the message to contact@example.com
+    // Change the recipient below if you prefer a different email address.
+    const recipient = 'contact@example.com';
+    const subject = encodeURIComponent(`Website enquiry from ${formData.name || 'Guest'}`);
+    const bodyLines = [
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Phone: ${formData.phone}`,
+      `Company: ${formData.company}`,
+      '',
+      'Message:',
+      `${formData.message}`,
+    ];
+    const body = encodeURIComponent(bodyLines.join('\n'));
+    const mailto = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
+    // Open the user's default mail client with the composed message
+    window.location.href = mailto;
+
     setSubmitted(true);
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      message: '',
-    });
+    setFormData({ name: '', email: '', phone: '', company: '', message: '' });
 
     setTimeout(() => setSubmitted(false), 3000);
   };

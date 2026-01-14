@@ -5,132 +5,44 @@ const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const products = [
-    {
-      id: 1,
-      category: 'conveyor',
-      name: 'PVC/PU/PE Conveyor Belts',
-      description: 'Wide range of Light Duty & Heavy-Duty applications covering various industries',
-      specs: [
-        'Material: PVC, PU, PE',
-        'Thickness: 0.8-9.0mm',
-        'Plies: 1,2,3,4 Woven & Felt',
-        'Colors: White, Green, Black',
-        'Surface: Matt, Glossy, Diamond, Rough Top',
-      ],
-    },
-    {
-      id: 2,
-      category: 'conveyor',
-      name: 'Cleated / Sidewall Belts',
-      description: 'Specialized belts with cleats and corrugated sidewalls for inclined conveying',
-      specs: [
-        'White/Green Cleats',
-        'L, T shaped cleats available',
-        'Ultrasonically welded',
-        'Corrugated sidewalls',
-        'Tracking profiles available',
-      ],
-    },
-    {
-      id: 3,
-      category: 'timing',
-      name: 'Timing Belts & Pulleys',
-      description: 'High-quality timing belts for precision power transmission applications',
-      specs: [
-        'Pitches: AT10, AT20, HTD5M, HTD8M, HTD14M',
-        'Metric Pitch: T10, T20',
-        'Inch Pitch: L, H',
-        'Tension Cords: Stainless Steel, Kevlar',
-        'Linear or Endless options',
-      ],
-    },
-    {
-      id: 4,
-      category: 'modular',
-      name: 'Plastic Modular Belts',
-      description: 'Advanced modular belting systems ideal for food and industrial applications',
-      specs: [
-        'Chemical agent resistant',
-        'Minimum friction coefficient',
-        'No lubrication needed',
-        'Lightweight design',
-        'Positive drive system',
-      ],
-    },
-    {
-      id: 5,
-      category: 'heavy',
-      name: 'Heavy Duty Rubber Belts',
-      description: 'Robust conveyor belts for demanding industrial environments',
-      specs: [
-        'Airport applications',
-        'Mining & Construction',
-        'Thermal plants',
-        'Processing industries',
-        'High durability',
-      ],
-    },
-    {
-      id: 6,
-      category: 'specialty',
-      name: 'Flat Transmission Belts',
-      description: 'NYTRAN belts for power transmission from fractional to 2000 KW drives',
-      specs: [
-        'Nylon Sandwich construction',
-        'Polyester Cord options',
-        'High modular tension member',
-        'Flexible Z splice',
-        '0.2mm to 4mm thickness',
-      ],
-    },
-    {
-      id: 7,
-      category: 'specialty',
-      name: 'Caterpillar Belts',
-      description: 'TRAKPULL endless belts designed for cable pulling applications',
-      specs: [
-        'Polyester or Aramid yarns',
-        'Excellent track properties',
-        'Wear resistant edges',
-        'No splice - constant thickness',
-        'Oil & plasticizer resistant',
-      ],
-    },
-    {
-      id: 8,
-      category: 'specialty',
-      name: 'High Temperature Felt Belts',
-      description: 'ALU-EX belts for aluminum extrusion and high-temperature applications',
-      specs: [
-        'Nomex & Kevlar construction',
-        'Zylon PBO fiber options',
-        'High temperature resistance',
-        'Truly endless construction',
-        'Industrial grade',
-      ],
-    },
-    {
-      id: 9,
-      category: 'specialty',
-      name: 'Wire Mesh Belts',
-      description: 'Compound balanced weave and articulated wire bands for baking and cooling',
-      specs: [
-        'Z-47 Wire Band',
-        'LK-6 Stripper Belt',
-        'Compound Balanced Weave',
-        'Material: MS, SS, GI',
-        'Baking & cooling applications',
-      ],
-    },
+    { id: 1, category: 'belt-conveyor', name: 'Flat Belt Conveyor', description: 'Simple and reliable flat belt conveyors for horizontal transport of packages and goods.', specs: ['Suitable for light to medium loads', 'Low maintenance', 'Custom widths and lengths', 'Comfortable tracking and tensioning options'] },
+    { id: 2, category: 'belt-conveyor', name: 'Inclined Belt Conveyor', description: 'Belt conveyors designed with inclination for elevation changes in the production line.', specs: ['Available with cleats for positive conveying', 'Steep incline options', 'Anti-slip surfaces', 'Customizable incline angles'] },
+    { id: 3, category: 'belt-conveyor', name: 'Aluminum Belt Conveyor', description: 'Lightweight, corrosion-resistant belt conveyors using aluminum framing for hygienic or portable applications.', specs: ['Anodized aluminum frames', 'Low weight, high strength', 'Ideal for food and clean environments', 'Modular and portable'] },
+    { id: 4, category: 'belt-conveyor', name: 'Curve Belt Conveyor', description: 'Curved belt conveyors to smoothly change transport direction while maintaining orientation.', specs: ['Tight radius options', 'Multiple belt materials', 'Low product re-orientation', 'Combination with straight sections'] },
+    { id: 5, category: 'belt-conveyor', name: 'Modular Belt Conveyor', description: 'Plastic modular belting system for washdown and food-processing environments.', specs: ['Interlocking plastic modules', 'Easy replacement of damaged modules', 'Good drainage and cleanability', 'Positive drive options'] },
+    { id: 6, category: 'belt-conveyor', name: 'Telescopic Belt Conveyor', description: 'Extendable conveyors for loading/unloading trucks and containers to speed handling.', specs: ['Variable length extension', 'Hydraulic or electric drive', 'Low-profile retractable design', 'Adjustable speed'] },
+
+    { id: 7, category: 'roller-conveyor', name: 'Free Roller Conveyor', description: 'Gravity roller conveyors for simple accumulation and transfer using incline or push.', specs: ['Low-cost passive transport', 'Ideal for carton handling', 'Modular sections', 'Minimal power usage'] },
+    { id: 8, category: 'roller-conveyor', name: 'Motorized Roller Conveyor', description: 'Driven roller conveyors for controlled movement with variable speed and indexing.', specs: ['Motorized rollers (drives)', 'Speed control and indexing', 'Can integrate with automation', 'Suitable for lines and merges'] },
+    { id: 9, category: 'roller-conveyor', name: 'Curve Roller Conveyor', description: 'Curved roller sections to route product flow while keeping consistent pitch.', specs: ['Ball or roller curves', 'Low friction turns', 'Custom radii', 'Compatible with straight rollers'] },
+
+    { id: 10, category: 'flexible-conveyor', name: 'Flexible Skate Conveyor', description: 'Portable flexible skate conveyors that expand and bend to fit loading geometries.', specs: ['Collapsible accordion design', 'Portable and lightweight', 'Ideal for temporary lines', 'Easy storage'] },
+    { id: 11, category: 'flexible-conveyor', name: 'Flexible Roller Conveyor', description: 'Flexible roller conveyors offering mobility with roller-based surface transport.', specs: ['Telescopic flexible sections', 'Good for uneven floors', 'Portable', 'Safe manual handling'] },
+    { id: 12, category: 'flexible-conveyor', name: 'Motorized Flexible Conveyor', description: 'Powered flexible conveyors for automated loading with variable speed.', specs: ['Motorized rollers in flexible frame', 'Speed control', 'Automatic retraction', 'Used in express logistics'] },
+
+    { id: 13, category: 'chain-conveyor', name: 'Vertical Chain Conveyor', description: 'Chain-based vertical conveying solutions for lifting heavy loads between elevations.', specs: ['High load capacity', 'Compact footprint', 'Positive product support', 'Suitable for pallets and crates'] },
+    { id: 14, category: 'chain-conveyor', name: 'Slat Chain Conveyor', description: 'Slat conveyors using chain-driven slats for heavy or hot applications.', specs: ['Robust slat design', 'Good for heavy, sharp, or hot items', 'High-temperature options', 'Modular slat replacement'] },
+
+    { id: 15, category: 'overhead-conveyor', name: 'Four Wheel Overhead Conveyor', description: 'Overhead trolley system with four-wheel hangers for lightweight parts transport.', specs: ['Trolleys with four-wheel support', 'Smooth overhead routing', 'Ideal for assembly lines', 'Reduced floor usage'] },
+    { id: 16, category: 'overhead-conveyor', name: '1-Beam Overhead Conveyor', description: 'Single-beam overhead conveyor for streamlined part movement in assembly and finishing.', specs: ['Single-beam track', 'Compact suspension', 'Suitable for paint and assembly lines', 'Easy integration with fixtures'] },
+
+    { id: 17, category: 'others', name: 'Truck Loading Conveyor', description: 'Conveyors designed for efficient truck and trailer loading and unloading.', specs: ['Telescopic or straight options', 'High throughput', 'Adjustable height', 'Safety features'] },
+    { id: 18, category: 'others', name: 'Spiral Conveyor', description: 'Space-saving vertical transport using a spiral path for gentle elevation change.', specs: ['Compact vertical footprint', 'Continuous flow', 'Gentle handling', 'Various belt materials'] },
+    { id: 19, category: 'others', name: 'Ball Type Assembly Line Conveyor', description: 'Ball transfer conveyors for easy omni-directional movement and precise positioning.', specs: ['Ball transfer units', 'Great for manual assembly', 'Low-friction multidirectional movement', 'Modular panels'] },
+    { id: 20, category: 'others', name: 'Hinge Conveyor', description: 'Hinge belt conveyors for incline/decline applications with positive product support.', specs: ['Hinged metal or plastic links', 'Good for heavy and hot products', 'Positive grip on inclines', 'Durable construction'] },
+    { id: 21, category: 'others', name: 'Wire Mesh Conveyor', description: 'Wire mesh belt conveyors for oven, washing and cooling applications.', specs: ['Open mesh for heat/air flow', 'High-temperature resistant', 'Stainless steel options', 'Food-safe configurations'] },
+    { id: 22, category: 'others', name: 'Inverted Four Wheel Conveyor', description: 'Inverted four-wheel systems for specialized handling and compact suspension.', specs: ['Inverted trolley arrangement', 'Reduced footprint', 'Good for hanging parts', 'Smooth transit'] },
+    { id: 23, category: 'others', name: 'Diverting and Sorting Conveyor', description: 'Conveyors with diverting and sorting mechanisms for automated flow control.', specs: ['Pushers and diverts', 'Sensors and PLC integration', 'High-speed sorting', 'Configurable lanes'] },
   ];
 
   const categories = [
     { id: 'all', name: 'All Products' },
-    { id: 'conveyor', name: 'Conveyor Belts' },
-    { id: 'timing', name: 'Timing Belts' },
-    { id: 'modular', name: 'Modular Belts' },
-    { id: 'heavy', name: 'Heavy Duty' },
-    { id: 'specialty', name: 'Specialty Belts' },
+    { id: 'belt-conveyor', name: 'Belt Conveyor' },
+    { id: 'roller-conveyor', name: 'Roller Conveyor' },
+    { id: 'flexible-conveyor', name: 'Flexible Conveyor' },
+    { id: 'chain-conveyor', name: 'Chain Conveyor' },
+    { id: 'overhead-conveyor', name: 'Overhead Conveyor' },
+    { id: 'others', name: 'Others' },
   ];
 
   const filteredProducts =

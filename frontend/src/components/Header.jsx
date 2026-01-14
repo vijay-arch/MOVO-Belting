@@ -25,17 +25,17 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gradient-to-br from-yellow-500 via-yellow-400 to-yellow-300 ${
+        isScrolled ? 'shadow-lg' : ''
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold">
-              <span className="text-blue-600">MOVO</span>
-              <span className={isScrolled ? 'text-gray-800' : 'text-white'}>BELTING</span>
+            <div className="text-2xl font-bold text-gray-900">
+              <span>MOVO</span>
+              <span className="ml-1">BELTING</span>
             </div>
           </Link>
 
@@ -47,10 +47,8 @@ const Header = () => {
                 to={link.path}
                 className={`font-medium transition-colors duration-300 ${
                   location.pathname === link.path
-                    ? 'text-blue-600'
-                    : isScrolled
-                    ? 'text-gray-700 hover:text-blue-600'
-                    : 'text-white hover:text-blue-400'
+                    ? 'text-yellow-800'
+                    : 'text-gray-900 hover:text-yellow-700'
                 }`}
               >
                 {link.label}
@@ -60,9 +58,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden ${
-              isScrolled ? 'text-gray-800' : 'text-white'
-            }`}
+            className="md:hidden text-gray-900"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -78,8 +74,8 @@ const Header = () => {
                 to={link.path}
                 className={`block px-6 py-3 font-medium transition-colors ${
                   location.pathname === link.path
-                    ? 'text-blue-600 bg-blue-50'
-                    : 'text-gray-700 hover:bg-gray-50'
+                    ? 'text-yellow-800 bg-yellow-50'
+                    : 'text-gray-900 hover:bg-gray-50'
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
