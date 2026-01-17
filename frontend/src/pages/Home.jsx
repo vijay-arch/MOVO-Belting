@@ -6,17 +6,18 @@ const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
-    {
-      title: 'Complete Belting Solution',
-      subtitle: 'PVC/PU/PE Conveyor Belts',
-      description: 'Wide range of Light Duty & Heavy-Duty applications',
-      features: ['Material: PVC, PU, PE', 'Thickness: 0.8-9.0mm', 'Multiple Plies Available'],
-    },
+    
     {
       title: 'Conveyor Solutions',
       subtitle: 'Precision Power Transmission',
       description: 'High-quality conveyors belts with metric and inch pitches',
       features: ['AT10, AT20, HTD5M, HTD8M', 'Linear or Endless Options', 'Stainless Steel, Kevlar Cords'],
+    },
+    {
+      title: 'Complete Belting Solution',
+      subtitle: 'PVC/PU/PE Conveyor Belts',
+      description: 'Wide range of Light Duty & Heavy-Duty applications',
+      features: ['Material: PVC, PU, PE', 'Thickness: 0.8-9.0mm', 'Multiple Plies Available'],
     },
     {
       title: 'Flexible and Customizable Belting solutions',
@@ -142,10 +143,10 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Complete Belting Solutions
+              Complete Conveyor and Belting Solutions
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Movobelting Industries provides comprehensive belting solutions for diverse industrial
+              Movobelting Industries provides comprehensive conveyor and belting solutions for diverse industrial
               applications. From conveyor belts to timing belts, modular belts to heavy-duty solutions,
               we offer state-of-the-art products that enhance your production efficiency.
             </p>
