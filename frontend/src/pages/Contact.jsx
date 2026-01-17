@@ -28,7 +28,7 @@ const Contact = () => {
 
     // Build a mailto: link so the user's mail client sends the message to contact@example.com
     // Change the recipient below if you prefer a different email address.
-    const recipient = 'contact@example.com';
+    const recipient = 'movobelting@gmail.com';
     const subject = encodeURIComponent(`Website enquiry from ${formData.name || 'Guest'}`);
     const bodyLines = [
       `Name: ${formData.name}`,
