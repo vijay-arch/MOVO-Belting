@@ -81,10 +81,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">Address</h3>
                     <p className="text-gray-600">
-                      Mangal Bakery Machines, Goaves Circle
+                     Plot No 48/B SY No 658/1B 
                       <br />
-                      Opp. Khau Katta, BELAGAVI - 590001
-                      <br />
+Tiny Co-Opeartive Society
+Industrail Estate Udyambag   Belgaum 590008                   <br />
                       Karnataka, India
                     </p>
                   </div>
@@ -99,7 +99,9 @@ const Contact = () => {
                     <p className="text-gray-600">
                       +91 9743533859
                       <br />
-                      +91 9916419000
+                      +91 9591452090
+                      <br />
+                      +91 9480538786
                     </p>
                   </div>
                 </div>
