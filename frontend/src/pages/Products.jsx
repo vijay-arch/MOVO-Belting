@@ -217,8 +217,8 @@ const Products = () => {
       ]
     },
     'other-systems': {
-      title: 'Specialized Conveyor Systems',
-      description: 'Specialized solutions including telescopic, chain, and overhead systems',
+      title: 'Other Conveyor Systems',
+      description: 'Other solutions including telescopic, chain, and overhead systems',
       products: [
         {
           id: 13,
@@ -489,7 +489,7 @@ const Products = () => {
       ]
     },
     'compound-balanced-weave': {
-      title: 'Compound Balanced Weave',
+      title: 'Compound Balanced Weav',
       description: 'Premium balanced weave belts with various specifications for different applications',
       products: [
         {
@@ -540,7 +540,7 @@ const Products = () => {
       ]
     },
     'specialty-belts': {
-      title: 'Specialty Belts',
+      title: 'Other Belts',
       description: 'Complete range of specialized belting solutions for unique applications',
       products: [
         {

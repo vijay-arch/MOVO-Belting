@@ -3,55 +3,78 @@ import { Settings, Wrench, Cpu, Eye } from 'lucide-react';
 
 const Services = () => {
   const services = [
-    // {
-    //   icon: <Settings size={48} />,
-    //   title: 'Material Handling Systems',
-    //   description: 'Complete conveyor and handling solutions for your production line',
-    //   features: [
-    //     'Belt Conveyor Systems',
-    //     'Plastic Modular Conveyors',
-    //     'Slat Conveyors',
-    //     'Chain & Chip Conveyors',
-    //     'Screw Conveyors',
-    //   ],
-    // },
     {
       icon: <Wrench size={48} />,
-      title: 'Belt Services & Support',
-      description: 'Comprehensive maintenance and support for all belting systems',
+      title: 'Material Handling System Design',
+      description: 'Complete design and consultation for conveyor and material handling systems',
       features: [
-        'Belt Installation',
-        'Maintenance Services',
-        'Repair & Splicing',
-        'Technical Consultation',
-        'Emergency Support',
+        'Belt Conveyor System Design',
+        'Roller & Modular Conveyor Solutions',
+        'Specialized Systems (Slat, Chain, Overhead)',
+        'Custom Conveyor Engineering',
+        'System Layout & Optimization',
       ],
     },
-     {
-      icon: <Eye size={48} />,
-      title: 'Custom Solutions',
-      description: 'Tailored belting solutions designed for your specific needs',
+    {
+      icon: <Wrench size={48} />,
+      title: 'Installation & Commissioning',
+      description: 'Professional installation, setup, and commissioning of all conveyor systems',
       features: [
-        'Custom Belt Design',
-        'Special Coatings',
-        'Cleats & Sidewalls',
-        'Non-standard Sizes',
-        'Industry-specific Solutions',
+        'Belt Installation & Tensioning',
+        'Roller & Modular Conveyor Setup',
+        'Overhead & Specialized System Installation',
+        'System Testing & Validation',
+        'Operator Training',
+      ],
+    },
+    {
+      icon: <Wrench size={48} />,
+      title: 'Maintenance & Support Services',
+      description: 'Comprehensive preventive and corrective maintenance for all belt systems',
+      features: [
+        'Regular Maintenance Programs',
+        'Belt Repair & Splicing',
+        'Wear Inspection & Replacement',
+        'Emergency Technical Support',
+        'Scheduled Maintenance Plans',
+      ],
+    },
+    {
+      icon: <Eye size={48} />,
+      title: 'Custom Belt Solutions',
+      description: 'Tailored belting solutions designed for specific industrial requirements',
+      features: [
+        'PUC/PU/PE Conveyor Belts',
+        'Plastic Modular Belts',
+        'Specialty Belts (Wire Mesh, High Temperature)',
+        'Timing Belts & Power Transmission',
+        'Custom Coating & Specification',
       ],
     },
     {
       icon: <Cpu size={48} />,
-      title: 'Industrial Automation',
-      description: 'Advanced automation solutions to optimize your production efficiency',
+      title: 'Automation & Control Systems',
+      description: 'Advanced industrial automation solutions for production optimization',
       features: [
-        'Automated Conveyor Systems',
-        'PLC Integration',
-        'Sensor & Control Systems',
-        'Production Line Automation',
-        'Custom Automation Solutions',
+        'PLC-Based Control Systems',
+        'HMI Touchscreen Integration',
+        'SCADA System Implementation',
+        'Real-time Monitoring & Analytics',
+        'Industry 4.0 Integration',
       ],
     },
-   
+    {
+      icon: <Settings size={48} />,
+      title: 'System Integration Services',
+      description: 'End-to-end integration of conveyors with existing production systems',
+      features: [
+        'Multi-System Coordination',
+        'Diverting & Sorting Solutions',
+        'Production Line Automation',
+        'Safety System Integration',
+        'System Upgrade & Optimization',
+      ],
+    },
   ];
 
   return (

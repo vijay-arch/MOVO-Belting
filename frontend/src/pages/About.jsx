@@ -8,13 +8,22 @@ const About = () => {
       <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-4">About Us</h1>
-          <p className="text-xl text-blue-100">Your trusted partner in industrial belting solutions</p>
+          <p className="text-xl text-blue-100">Your trusted partner in industrial Material Handling Systems and  belting solutions</p>
         </div>
       </section>
 
       {/* Company Overview */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      <section 
+        className="py-20 relative"
+        style={{
+          backgroundImage: `url(${require('../assets/movo team.jpeg')})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        <div className="absolute inset-0 bg-white/85 backdrop-blur-sm"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Movobelting Industries</h2>
             <p className="text-lg text-gray-600 mb-6">
