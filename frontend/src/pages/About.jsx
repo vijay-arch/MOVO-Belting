@@ -16,7 +16,7 @@ const About = () => {
       <section 
         className="py-20 relative"
         style={{
-          backgroundImage: `url(${require('../assets/movo team.jpeg')})`,
+          backgroundImage: `url(${require('../assets/movo-team.jpeg')})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'

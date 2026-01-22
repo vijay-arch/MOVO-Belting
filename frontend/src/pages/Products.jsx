@@ -1,65 +1,128 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 // Material Handling Systems - Belt Conveyors
-import horizontalBeltImg from '../assets/horizontal belt conveyor.jpeg';
-import inclinedBeltImg from '../assets/inclined belt conveyor.jpeg';
-import inclinedBelt2Img from '../assets/inclined belt conveyor 2.jpeg';
-import declinedBeltImg from '../assets/declined belt conveyor.jpeg';
-import curveBeltImg from '../assets/curve conveyor.jpeg';
-import aluminumBeltImg from '../assets/alluminum belt conveyor.jpeg';
+import horizontalBeltImg from '../assets/horizontal-belt-conveyor.jpeg';
+import inclinedBeltImg from '../assets/inclined-belt-conveyor.jpeg';
+import inclinedBelt2Img from '../assets/inclined-belt-conveyor-2.jpeg';
+import declinedBeltImg from '../assets/declined-belt-conveyor.jpeg';
+import curveBeltImg from '../assets/curve-conveyor.jpeg';
+import aluminumBeltImg from '../assets/aluminum-belt-conveyor.jpeg';
 
 // Material Handling Systems - Roller Conveyors
-import freeRollerImg from '../assets/free roller conveyor.jpeg';
-import motorizedRollerImg from '../assets/motorized roller conveyor.jpeg';
-import curveRollerImg from '../assets/curve roller conveyor.jpeg';
+import freeRollerImg from '../assets/free-roller-conveyor.jpeg';
+import motorizedRollerImg from '../assets/motorized-roller-conveyor.jpeg';
+import curveRollerImg from '../assets/curve-roller-conveyor.jpeg';
 
 // Material Handling Systems - Flexible Conveyors
-import flexibleSkateImg from '../assets/flexible skate wheel conveyor.jpeg';
-import flexibleRollerImg from '../assets/flexible roller conveyor.jpeg';
+import flexibleSkateImg from '../assets/flexible-skate-wheel-conveyor.jpeg';
+import flexibleRollerImg from '../assets/flexible-roller-conveyor.jpeg';
 
 // Material Handling Systems - Modular Conveyors
-import modularBeltImg from '../assets/modular belt conveyor.jpeg';
+import modularBeltImg from '../assets/modular-belt-conveyor.jpeg';
 
 // Material Handling Systems - Others
-import telescopicImg from '../assets/telescopic conveyor.jpeg';
-import telescopic2Img from '../assets/telescopic conveyor 2.jpeg';
-import truckLoadingImg from '../assets/truck loading unloading conveyor.jpeg';
-import truckLoading2Img from '../assets/truck loading unloading conveyor 2.jpeg';
-import truckLoading3Img from '../assets/truck loading and unloading conveyor 3.jpeg';
-import spiralImg from '../assets/spiral belt conveyor.jpeg';
-import spiral2Img from '../assets/spiral belt conveyor 2.jpeg';
-import verticalChainImg from '../assets/verticle chain conveyor.jpeg';
-import slatChainImg from '../assets/slat chain conveyor.jpeg';
-import slatChain2Img from '../assets/slat chain conveyor2.jpeg';
-import slatChain3Img from '../assets/slat chain conveyor3.jpeg';
-import plasticSlatChainImg from '../assets/plastic slat chain conveyor.jpeg';
-import plasticSlatChain1Img from '../assets/plastic slat chain conveyor 1.jpeg';
-import hingeImg from '../assets/hinge conveyor.jpeg';
-import hinge2Img from '../assets/hinge conveyor 2.jpeg';
-import chainImg from '../assets/chain conveyor.jpeg';
-import chain2Img from '../assets/chain conveyor 2.jpeg';
-import wireMeshImg from '../assets/wire mesh conveyor.jpeg';
-import wireMesh2Img from '../assets/wire mesh conveyor 2.jpeg';
-import assemblyImg from '../assets/2w 3w assembly conveyor.jpeg';
-import fourWheelImg from '../assets/4 wheel overhead conveyor.jpeg';
-import iBeamImg from '../assets/i beam overhead conveyor.jpeg';
-import divertingImg from '../assets/diverting and sorting conveyor.jpeg';
+import telescopicImg from '../assets/telescopic-conveyor.jpeg';
+import telescopic2Img from '../assets/telescopic-conveyor-2.jpeg';
+import truckLoadingImg from '../assets/truck-loading-unloading-conveyor.jpeg';
+import truckLoading2Img from '../assets/truck-loading-unloading-conveyor-2.jpeg';
+import truckLoading3Img from '../assets/truck-loading-unloading-conveyor-3.jpeg';
+import spiralImg from '../assets/spiral-belt-conveyor.jpeg';
+import spiral2Img from '../assets/spiral-belt-conveyor-2.jpeg';
+import verticalChainImg from '../assets/vertical-chain-conveyor.jpeg';
+import slatChainImg from '../assets/slat-chain-conveyor.jpeg';
+import slatChain2Img from '../assets/slat-chain-conveyor-2.jpeg';
+import slatChain3Img from '../assets/slat-chain-conveyor-3.jpeg';
+import plasticSlatChainImg from '../assets/plastic-slat-chain-conveyor.jpeg';
+import plasticSlatChain1Img from '../assets/plastic-slat-chain-conveyor-1.jpeg';
+import hingeImg from '../assets/hinge-conveyor.jpeg';
+import hinge2Img from '../assets/hinge-conveyor-2.jpeg';
+import chainImg from '../assets/chain-conveyor.jpeg';
+import chain2Img from '../assets/chain-conveyor-2.jpeg';
+import wireMeshImg from '../assets/wire-mesh-conveyor.jpeg';
+import wireMesh2Img from '../assets/wire-mesh-conveyor-2.jpeg';
+import assemblyImg from '../assets/3w-assembly-conveyor.jpeg';
+import fourWheelImg from '../assets/4wheel-overhead-conveyor.jpeg';
+import iBeamImg from '../assets/i-beam-overhead-conveyor.jpeg';
+import divertingImg from '../assets/diverting-and-sorting-conveyor.jpeg';
 
 // System Integration & Automation
-import electricControlImg from '../assets/electric control panel.jpg';
-import customizedControlImg from '../assets/custimized control screen.png';
-import scadaSystemImg from '../assets/scada system.jpg';
+import electricControlImg from '../assets/electric-control-panel.jpg';
+import customizedControlImg from '../assets/customized-control-screen.png';
+import scadaSystemImg from '../assets/scada-system.jpg';
 
 // Conveyor Belt Charts
-import conveyorBeltChartImg from '../assets/conveyor belt chart.png';
-import conveyorBeltChart2Img from '../assets/conveyor belt chart 2.png';
+import conveyorBeltChartImg from '../assets/conveyor-belt-chart.png';
+import conveyorBeltChart2Img from '../assets/conveyor-belt-chart-2.png';
+
+// Belting Solutions - PU/PUC/PE Belts
+import pucBeltImg from '../assets/pu-conveyor-belt.jpg';
+import puBeltImg from '../assets/pu-conveyor-belt.jpg';
+import peBeltImg from '../assets/pe-conveyor-belt.jpg';
+
+// Belting Solutions - Plastic Modular Belts
+import flatTopModularImg from '../assets/flat-top-modular-belt.jpg';
+import positrackModularImg from '../assets/positrac.jpg';
+
+// Belting Solutions - Compound Balanced Weave
+import lk6BeltImg from '../assets/lk-6.jpg';
+import lk3BeltImg from '../assets/lk-3.jpg';
+import lk4BeltImg from '../assets/lk4.jpg';
+
+// Belting Solutions - Specialty Belts
+import timingBeltImg from '../assets/timing-belt.jpg';
+import coilWrapperImg from '../assets/coil-wraper-belt.jpg';
+import textilePrintingImg from '../assets/textile-printing-belt.jpg';
+import gridPlasticImg from '../assets/flat-top-modular-belt.jpg';
+import caterpillarImg from '../assets/rubber-caterpillar-belt.jpg';
+import highTempFeltImg from '../assets/high-temperature-felt.jpg';
+import biscuitOvenImg from '../assets/biscuit-oven-wire-band.jpg';
+import doubleLockImg from '../assets/double-lock-conveyor-belt.jpeg';
+import chainLinkImg from '../assets/chain-link-belt.jpg';
+import duplexImg from '../assets/duplex-conveyor-belt.jpg';
 
 const Products = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [expandedCategory, setExpandedCategory] = useState('material-handling');
   const [expandedSubcategory, setExpandedSubcategory] = useState(null);
+
+  // Restore state when component mounts or returns from product detail
+  useEffect(() => {
+    const savedState = sessionStorage.getItem('productsPageState');
+    if (savedState) {
+      try {
+        const { category, subcategory, scrollPos } = JSON.parse(savedState);
+        setExpandedCategory(category);
+        setExpandedSubcategory(subcategory);
+        
+        // Restore scroll position after a small delay to ensure DOM is ready
+        setTimeout(() => {
+          window.scrollTo(0, scrollPos);
+        }, 100);
+        
+        // Clear the saved state after restoring it
+        sessionStorage.removeItem('productsPageState');
+      } catch (error) {
+        console.error('Error restoring products page state:', error);
+      }
+    } else {
+      // Scroll to top when page first loads (no saved state)
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
+  // Save state before navigating to product detail
+  const handleProductClick = (product) => {
+    const state = {
+      category: expandedCategory,
+      subcategory: expandedSubcategory,
+      scrollPos: window.scrollY
+    };
+    sessionStorage.setItem('productsPageState', JSON.stringify(state));
+    navigate('/product-detail', { state: { product } });
+  };
 
   // Material Handling Systems Products
   const materialHandlingProducts = {
@@ -378,13 +441,13 @@ const Products = () => {
   // Belting Solutions Products
   const beltingSolutions = {
     'pu-belts': {
-      title: 'PUC/PU/PE Conveyor Belts',
+      title: 'PVC/PU/PE Conveyor Belts',
       description: 'Premium polyurethane and polyethylene conveyor belts with technical specifications',
       products: [
         {
           id: 201,
-          name: 'PUC Conveyor Belt',
-          image: 'https://via.placeholder.com/400x300?text=PUC+Belt',
+          name: 'PVC Conveyor Belt',
+          image: pucBeltImg,
           images: [conveyorBeltChartImg, conveyorBeltChart2Img],
           description: 'Polyurethane coating on fabric base - excellent for precision applications.',
           specs: [
@@ -407,7 +470,7 @@ const Products = () => {
         {
           id: 202,
           name: 'PU Conveyor Belt',
-          image: 'https://via.placeholder.com/400x300?text=PU+Belt',
+          image: puBeltImg,
           images: [conveyorBeltChartImg, conveyorBeltChart2Img],
           description: 'Pure polyurethane belts - superior durability and flexibility.',
           specs: [
@@ -430,7 +493,7 @@ const Products = () => {
         {
           id: 203,
           name: 'PE Conveyor Belt',
-          image: 'https://via.placeholder.com/400x300?text=PE+Belt',
+          image: peBeltImg,
           images: [conveyorBeltChartImg, conveyorBeltChart2Img],
           description: 'Polyethylene belts - economical choice with good performance.',
           specs: [
@@ -459,7 +522,7 @@ const Products = () => {
         {
           id: 204,
           name: 'Flat Top Modular Belt',
-          image: 'https://via.placeholder.com/400x300?text=Flat+Modular',
+          image: flatTopModularImg,
           description: 'Interlocking plastic modules for smooth product transport.',
           specs: [
             'Easy module replacement',
@@ -474,7 +537,7 @@ const Products = () => {
         {
           id: 205,
           name: 'Positrack Modular Belt',
-          image: 'https://via.placeholder.com/400x300?text=Positrack+Belt',
+          image: positrackModularImg,
           description: 'High-grip modular belt with positive drive features.',
           specs: [
             'Superior grip and control',
@@ -495,7 +558,7 @@ const Products = () => {
         {
           id: 214,
           name: 'LK-6 (Stripper Belt)',
-          image: 'https://via.placeholder.com/400x300?text=LK-6+Weave',
+          image: lk6BeltImg,
           description: 'Heavy-duty 6mm compound balanced weave for extreme conditions.',
           specs: [
             'High tensile strength',
@@ -510,7 +573,7 @@ const Products = () => {
         {
           id: 215,
           name: 'LK-3 (Type Belt)',
-          image: 'https://via.placeholder.com/400x300?text=LK-3+Weave',
+          image: lk3BeltImg,
           description: 'Standard 3mm compound balanced weave for general use.',
           specs: [
             'Medium tensile strength',
@@ -525,7 +588,7 @@ const Products = () => {
         {
           id: 216,
           name: 'LK-4 (Type Belt)',
-          image: 'https://via.placeholder.com/400x300?text=LK-4+Weave',
+          image: lk4BeltImg,
           description: 'Premium 4mm compound balanced weave for balanced performance.',
           specs: [
             'Balanced tensile strength',
@@ -546,7 +609,7 @@ const Products = () => {
         {
           id: 206,
           name: 'Timing Belt',
-          image: 'https://via.placeholder.com/400x300?text=Timing+Belt',
+          image: timingBeltImg,
           description: 'Precision timing belts for synchronized drive applications.',
           specs: [
             'Precise synchronization',
@@ -561,7 +624,7 @@ const Products = () => {
         {
           id: 207,
           name: 'Coil Wrapper Belt',
-          image: 'https://via.placeholder.com/400x300?text=Coil+Wrapper',
+          image: coilWrapperImg,
           description: 'Specialized belts for coil wrapping and positioning applications.',
           specs: [
             'High wear resistance',
@@ -576,7 +639,7 @@ const Products = () => {
         {
           id: 208,
           name: 'Textile Printing Belt',
-          image: 'https://via.placeholder.com/400x300?text=Textile+Belt',
+          image: textilePrintingImg,
           description: 'Specialized belts for textile printing and dyeing applications.',
           specs: [
             'Resistant to dyes and chemicals',
@@ -591,7 +654,7 @@ const Products = () => {
         {
           id: 209,
           name: 'Battery Grid Plastic Belt',
-          image: 'https://via.placeholder.com/400x300?text=Grid+Belt',
+          image: gridPlasticImg,
           description: 'Open grid design for drainage and ventilation.',
           specs: [
             'Open drainage structure',
@@ -606,7 +669,7 @@ const Products = () => {
         {
           id: 210,
           name: 'Caterpillar Belt',
-          image: 'https://via.placeholder.com/400x300?text=Caterpillar+Belt',
+          image: caterpillarImg,
           description: 'Heavy-duty caterpillar-style conveyor belt for demanding applications.',
           specs: [
             'Extreme load capacity',
@@ -621,7 +684,7 @@ const Products = () => {
         {
           id: 211,
           name: 'High Temperature Felt Belt',
-          image: 'https://via.placeholder.com/400x300?text=High+Temp+Felt',
+          image: highTempFeltImg,
           description: 'Premium felt belts for high-temperature processing.',
           specs: [
             'Temperature up to 500°C',
@@ -651,7 +714,7 @@ const Products = () => {
         {
           id: 213,
           name: 'Biscuit Oven Wire Band',
-          image: 'https://via.placeholder.com/400x300?text=Oven+Band',
+          image: biscuitOvenImg,
           description: 'Specialized wire band for biscuit and cookie ovens.',
           specs: [
             'Temperature resistant to 350°C',
@@ -666,7 +729,7 @@ const Products = () => {
         {
           id: 217,
           name: 'Double Lock Conveyor Belt',
-          image: 'https://via.placeholder.com/400x300?text=Double+Lock',
+          image: doubleLockImg,
           description: 'Premium double-lock design for maximum safety and performance.',
           specs: [
             'Double-stitched design',
@@ -681,7 +744,7 @@ const Products = () => {
         {
           id: 218,
           name: 'Chain Link Belt',
-          image: 'https://via.placeholder.com/400x300?text=Chain+Link+Belt',
+          image: chainLinkImg,
           description: 'Chain link design for heavy-duty industrial transport.',
           specs: [
             'Heavy-duty construction',
@@ -696,7 +759,7 @@ const Products = () => {
         {
           id: 219,
           name: 'Duplex Conveyor Belt',
-          image: 'https://via.placeholder.com/400x300?text=Duplex+Belt',
+          image: duplexImg,
           description: 'Duplex construction with dual-layer design for superior performance.',
           specs: [
             'Dual-layer construction',
@@ -854,7 +917,7 @@ const Products = () => {
 
                               {/* Learn More Button */}
                               <button 
-                                onClick={() => navigate('/product-detail', { state: { product } })}
+                                onClick={() => handleProductClick(product)}
                                 className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold text-sm transition-colors duration-300">
                                 View Details
                               </button>
@@ -924,7 +987,7 @@ const Products = () => {
                     </p>
 
                     <button 
-                      onClick={() => navigate('/product-detail', { state: { product } })}
+                      onClick={() => handleProductClick(product)}
                       className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold text-sm transition-colors duration-300">
                       Learn More
                     </button>
@@ -1044,7 +1107,7 @@ const Products = () => {
                               </div>
 
                               <button 
-                                onClick={() => navigate('/product-detail', { state: { product } })}
+                                onClick={() => handleProductClick(product)}
                                 className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-semibold text-sm transition-colors duration-300">
                                 Specifications
                               </button>
