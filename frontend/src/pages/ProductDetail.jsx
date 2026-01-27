@@ -9,7 +9,17 @@ const ProductDetail = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Get images array, fallback to single image
-  const productImages = product?.images || (product?.image ? [product.image] : []);
+  const allImages = product?.images || (product?.image ? [product.image] : []);
+
+  // Chart images to show separately for PVC/PE products (identified by filename)
+  const chartPatterns = ['pvc-chart1', 'conveyor-belt-chart-2'];
+  const chartImages = allImages.filter((img) => img && chartPatterns.some((p) => img.includes(p)));
+
+  // Gallery should exclude the chart images so they don't appear as thumbnails
+  const galleryImages = allImages.filter((img) => !(img && chartPatterns.some((p) => img.includes(p))));
+
+  // Use gallery images if available, otherwise fall back to all images
+  const productImages = galleryImages.length > 0 ? galleryImages : allImages;
 
   if (!product) {
     return (
@@ -107,6 +117,22 @@ const ProductDetail = () => {
                       >
                         <img src={img} alt={`${product.name} ${idx + 1}`} className="w-full h-20 object-cover" />
                       </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* If there are chart images, show them below the main image area (full-width within left column) */}
+              {chartImages.length > 0 && (
+                <div className="p-6 border-t border-gray-100">
+                  <h3 className="text-lg font-bold text-gray-900 mb-4">Conveyor Belt Charts</h3>
+                  <div className="space-y-4">
+                    {chartImages.map((img, idx) => (
+                      <div key={idx} className="bg-white rounded-md shadow-sm overflow-hidden">
+                        <div className="p-4 flex items-center justify-center">
+                          <img src={img} alt={`Chart ${idx + 1}`} className="w-full object-contain" style={{ maxHeight: 420 }} />
+                        </div>
+                      </div>
                     ))}
                   </div>
                 </div>

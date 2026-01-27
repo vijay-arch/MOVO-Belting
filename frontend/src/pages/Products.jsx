@@ -45,7 +45,9 @@ import wireMesh2Img from '../assets/wire-mesh-conveyor-2.jpeg';
 import assemblyImg from '../assets/3w-assembly-conveyor.jpeg';
 import fourWheelImg from '../assets/4wheel-overhead-conveyor.jpeg';
 import iBeamImg from '../assets/i-beam-overhead-conveyor.jpeg';
-import divertingImg from '../assets/diverting-and-sorting-conveyor.jpeg';
+import divertingImg from '../assets/diverting-and-sorting-conveyor.jpeg'; 
+import flatmodluar from '../assets/flat-modular-belt-conveyor.jpeg';
+import inclinedbelt from '../assets/inclined-modular-belt-conveyor.jpeg';
 
 // System Integration & Automation
 import electricControlImg from '../assets/electric-control-panel.jpg';
@@ -53,7 +55,7 @@ import customizedControlImg from '../assets/customized-control-screen.png';
 import scadaSystemImg from '../assets/scada-system.jpg';
 
 // Conveyor Belt Charts
-import conveyorBeltChartImg from '../assets/conveyor-belt-chart.png';
+import conveyorBeltChart1Img from '../assets/pvc-chart1.png';
 import conveyorBeltChart2Img from '../assets/conveyor-belt-chart-2.png';
 
 // Belting Solutions - PU/PUC/PE Belts
@@ -74,7 +76,7 @@ import lk4BeltImg from '../assets/lk4.jpg';
 import timingBeltImg from '../assets/timing-belt.jpg';
 import coilWrapperImg from '../assets/coil-wraper-belt.jpg';
 import textilePrintingImg from '../assets/textile-printing-belt.jpg';
-import gridPlasticImg from '../assets/flat-top-modular-belt.jpg';
+import gridPlasticImg from '../assets/battery-grid-pasting-belt.jpeg';
 import caterpillarImg from '../assets/rubber-caterpillar-belt.jpg';
 import highTempFeltImg from '../assets/high-temperature-felt.jpg';
 import biscuitOvenImg from '../assets/biscuit-oven-wire-band.jpg';
@@ -232,7 +234,7 @@ const Products = () => {
         {
           id: 12,
           name: 'Flat Modular Belt Conveyor',
-          image: modularBeltImg,
+          image: flatmodluar,
           description: 'Plastic modular belting system with interlocking units for washdown environments.',
           specs: ['Interlocking plastic modules', 'Easy replacement of damaged modules', 'Good drainage and cleanability', 'Positive drive options', 'FDA compliant materials available'],
           features: 'Industry standard for food and beverage processing'
@@ -240,7 +242,7 @@ const Products = () => {
         {
           id: 25,
           name: 'Inclined Modular Belt Conveyor',
-          image: '',
+          image: inclinedbelt,
           description: 'Modular conveyor systems designed with inclination for elevation changes, utilizing interlocking plastic modules with positive drive capabilities. The inclined design incorporates cleats or friction-enhanced surfaces to prevent product slippage while maintaining the easy maintenance benefits of modular construction.',
           specs: ['Interlocking modular design with cleats', 'Anti-slip surface enhancement', 'Steep incline capability up to 45°', 'Easy module replacement', 'Washdown compatible', 'FDA approved materials', 'Adjustable angle configurations'],
           features: 'Perfect for multi-level food processing and packaging facilities'
@@ -248,7 +250,7 @@ const Products = () => {
         {
           id: 26,
           name: 'Curve Modular Belt Conveyor',
-          image: '',
+          image: modularBeltImg ,
           description: 'Curved modular conveyor system with interlocking plastic belt modules designed for smooth directional changes in production lines. The curved sections maintain consistent height and use specialized interlocking modules to handle turning while preserving product integrity and orientation.',
           specs: ['Modular plastic belt construction', 'Curved path design with adjustable radius', 'Maintains product orientation during curves', 'Low friction turning capability', 'Easy module maintenance and replacement', 'Washdown resistant', 'FDA compliant options available', 'Space-efficient routing'],
           features: 'Ideal for optimizing production floor layout and routing'
@@ -419,7 +421,7 @@ const Products = () => {
         'Alarm management system',
         'Multi-language support'
       ],
-      features: 'Improves operator efficiency and reduces training time'
+      features: 'Improves operator efficiency and red uces training time'
     },
     {
       id: 103,
@@ -441,78 +443,64 @@ const Products = () => {
   // Belting Solutions Products
   const beltingSolutions = {
     'pu-belts': {
-      title: 'PVC/PU/PE Conveyor Belts',
+      title: 'PVC/PU Conveyor Belts',
       description: 'Premium polyurethane and polyethylene conveyor belts with technical specifications',
       products: [
         {
           id: 201,
-          name: 'PVC Conveyor Belt',
+          name: 'PVC / PU Conveyor Belt',
           image: pucBeltImg,
-          images: [conveyorBeltChartImg, conveyorBeltChart2Img],
-          description: 'Polyurethane coating on fabric base - excellent for precision applications.',
+          images: [pucBeltImg, conveyorBeltChart1Img, conveyorBeltChart2Img],
+          description: 'Combined PVC and PU conveyor belts offering a range of options from economical PVC-coated fabric belts to high-performance PU belts for hygiene-sensitive and precision applications.',
           specs: [
             'Smooth running surface',
             'Good grip properties',
             'Long service life',
             'Multiple color options',
             'Oil and grease resistant',
-            'Temperature range: -10°C to +60°C'
-          ],
-          technicalData: {
-            'Belt Thickness': '0.8mm - 3mm',
-            'Width Range': '300mm - 2000mm',
-            'Tensile Strength': '50-100 N/mm',
-            'Elongation': '3-5%',
-            'Surface': 'Smooth or Textured'
-          },
-          features: 'Industry standard for food and light manufacturing'
-        },
-        {
-          id: 202,
-          name: 'PU Conveyor Belt',
-          image: puBeltImg,
-          images: [conveyorBeltChartImg, conveyorBeltChart2Img],
-          description: 'Pure polyurethane belts - superior durability and flexibility.',
-          specs: [
             'High flexibility',
             'Excellent wear resistance',
-            'Oil and fat resistance',
             'Easy to clean',
             'FDA and EU compliant',
             'Temperature range: -30°C to +80°C'
           ],
           technicalData: {
-            'Belt Thickness': '1.5mm - 4mm',
-            'Width Range': '300mm - 2400mm',
-            'Tensile Strength': '80-150 N/mm',
-            'Elongation': '5-8%',
-            'Hardness': '85-95 Shore A'
+            'PVC - Belt Thickness': '1.5mm - 5mm',
+            'PVC - Width Range': '50mm - 3000mm',
+            'PVC - Tensile Strength': '50-100 N/mm',
+            'PVC - Elongation': '3-5%',
+            'PVC - Surface': 'Smooth or Textured',
+            'PU - Belt Thickness': '1.5mm - 4mm',
+            'PU - Width Range': '300mm - 2400mm',
+            'PU - Tensile Strength': '80-150 N/mm',
+            'PU - Elongation': '5-8%',
+            'PU - Hardness': '85-95 Shore A'
           },
-          features: 'Ideal for food processing and pharmaceutical industries'
+          features: 'Flexible selection for food, pharmaceutical, and light manufacturing with options for cleanability and durability'
         },
-        {
-          id: 203,
-          name: 'PE Conveyor Belt',
-          image: peBeltImg,
-          images: [conveyorBeltChartImg, conveyorBeltChart2Img],
-          description: 'Polyethylene belts - economical choice with good performance.',
-          specs: [
-            'Cost-effective solution',
-            'Good chemical resistance',
-            'Low friction coefficient',
-            'Lightweight',
-            'Easy installation',
-            'Temperature range: -5°C to +65°C'
-          ],
-          technicalData: {
-            'Belt Thickness': '1mm - 3mm',
-            'Width Range': '300mm - 1800mm',
-            'Tensile Strength': '40-80 N/mm',
-            'Elongation': '8-12%',
-            'Surface': 'Smooth or Corrugated'
-          },
-          features: 'Budget-friendly option for general applications'
-        }
+        // {
+        //   id: 203,
+        //   name: 'PE Conveyor Belt',
+        //   image: peBeltImg,
+        //   images: [conveyorBeltChartImg, conveyorBeltChart2Img],
+        //   description: 'Polyethylene belts - economical choice with good performance.',
+        //   specs: [
+        //     'Cost-effective solution',
+        //     'Good chemical resistance',
+        //     'Low friction coefficient',
+        //     'Lightweight',
+        //     'Easy installation',
+        //     'Temperature range: -5°C to +65°C'
+        //   ],
+        //   technicalData: {
+        //     'Belt Thickness': '1mm - 3mm',
+        //     'Width Range': '300mm - 1800mm',
+        //     'Tensile Strength': '40-80 N/mm',
+        //     'Elongation': '8-12%',
+        //     'Surface': 'Smooth or Corrugated'
+        //   },
+        //   features: 'Budget-friendly option for general applications'
+        // }
       ]
     },
     'plastic-modular': {
@@ -534,21 +522,21 @@ const Products = () => {
           ],
           features: 'Standard for food and beverage production'
         },
-        {
-          id: 205,
-          name: 'Positrack Modular Belt',
-          image: positrackModularImg,
-          description: 'High-grip modular belt with positive drive features.',
-          specs: [
-            'Superior grip and control',
-            'Prevents product slipping',
-            'Ideal for inclined angles',
-            'Long service life',
-            'Easy to customize',
-            'Multiple material options'
-          ],
-          features: 'Perfect for steep incline and specialty applications'
-        }
+        // {
+        //   id: 205,
+        //   name: 'Positrack Modular Belt',
+        //   image: positrackModularImg,
+        //   description: 'High-grip modular belt with positive drive features.',
+        //   specs: [
+        //     'Superior grip and control',
+        //     'Prevents product slipping',
+        //     'Ideal for inclined angles',
+        //     'Long service life',
+        //     'Easy to customize',
+        //     'Multiple material options'
+        //   ],
+        //   features: 'Perfect for steep incline and specialty applications'
+        // }
       ]
     },
     'compound-balanced-weave': {
@@ -599,6 +587,36 @@ const Products = () => {
             'Extended lifespan'
           ],
           features: 'Best all-around choice for most applications'
+        },
+        {
+          id: 218,
+          name: 'Chain Link Belt',
+          image: chainLinkImg,
+          description: 'Chain link design for heavy-duty industrial transport.',
+          specs: [
+            'Heavy-duty construction',
+            'Multiple chain options',
+            'High load capacity',
+            'Flexible routing',
+            'Low maintenance',
+            'Long service intervals'
+          ],
+          features: 'Workhorse for heavy industry'
+        },
+        {
+          id: 219,
+          name: 'Duplex Conveyor Belt',
+          image: duplexImg,
+          description: 'Duplex construction with dual-layer design for superior performance.',
+          specs: [
+            'Dual-layer construction',
+            'Maximum durability',
+            'Enhanced grip',
+            'Extended lifespan',
+            'Professional grade',
+            'Multiple material options'
+          ],
+          features: 'Premium solution for demanding environments'
         },
       ]
     },
@@ -653,7 +671,7 @@ const Products = () => {
         },
         {
           id: 209,
-          name: 'Battery Grid Plastic Belt',
+          name: 'Battery Grid Pasting Belt',
           image: gridPlasticImg,
           description: 'Open grid design for drainage and ventilation.',
           specs: [
@@ -666,21 +684,21 @@ const Products = () => {
           ],
           features: 'Perfect for washing and drying operations'
         },
-        {
-          id: 210,
-          name: 'Caterpillar Belt',
-          image: caterpillarImg,
-          description: 'Heavy-duty caterpillar-style conveyor belt for demanding applications.',
-          specs: [
-            'Extreme load capacity',
-            'High tensile strength',
-            'Shock absorption',
-            'Extended lifespan',
-            'Low maintenance',
-            'Rugged construction'
-          ],
-          features: 'For mining, construction, and heavy industries'
-        },
+        // {
+        //   id: 210,
+        //   name: 'Caterpillar Belt',
+        //   image: caterpillarImg,
+        //   description: 'Heavy-duty caterpillar-style conveyor belt for demanding applications.',
+        //   specs: [
+        //     'Extreme load capacity',
+        //     'High tensile strength',
+        //     'Shock absorption',
+        //     'Extended lifespan',
+        //     'Low maintenance',
+        //     'Rugged construction'
+        //   ],
+        //   features: 'For mining, construction, and heavy industries'
+        // },
         {
           id: 211,
           name: 'High Temperature Felt Belt',
@@ -696,36 +714,36 @@ const Products = () => {
           ],
           features: 'Essential for heat treatment and baking industries'
         },
-        {
-          id: 212,
-          name: 'Wire Mesh Belt',
-          image: wireMeshImg,
-          description: 'Open mesh construction for maximum drainage and ventilation.',
-          specs: [
-            'Temperature up to 400°C',
-            'Excellent drainage',
-            'Washdown compatible',
-            'Food safe',
-            'Easy cleaning',
-            'Stainless steel available'
-          ],
-          features: 'Standard for ovens, washers, and cooling lines'
-        },
-        {
-          id: 213,
-          name: 'Biscuit Oven Wire Band',
-          image: biscuitOvenImg,
-          description: 'Specialized wire band for biscuit and cookie ovens.',
-          specs: [
-            'Temperature resistant to 350°C',
-            'Perfect for even baking',
-            'Easy product transfer',
-            'Minimal product sticking',
-            'Long service intervals',
-            'Food grade materials'
-          ],
-          features: 'Industry standard for bakery operations'
-        },
+        // {
+        //   id: 212,
+        //   name: 'Wire Mesh Belt',
+        //   image: wireMeshImg,
+        //   description: 'Open mesh construction for maximum drainage and ventilation.',
+        //   specs: [
+        //     'Temperature up to 400°C',
+        //     'Excellent drainage',
+        //     'Washdown compatible',
+        //     'Food safe',
+        //     'Easy cleaning',
+        //     'Stainless steel available'
+        //   ],
+        //   features: 'Standard for ovens, washers, and cooling lines'
+        // },
+        // {
+        //   id: 213,
+        //   name: 'Biscuit Oven Wire Band',
+        //   image: biscuitOvenImg,
+        //   description: 'Specialized wire band for biscuit and cookie ovens.',
+        //   specs: [
+        //     'Temperature resistant to 350°C',
+        //     'Perfect for even baking',
+        //     'Easy product transfer',
+        //     'Minimal product sticking',
+        //     'Long service intervals',
+        //     'Food grade materials'
+        //   ],
+        //   features: 'Industry standard for bakery operations'
+        // },
         {
           id: 217,
           name: 'Double Lock Conveyor Belt',
@@ -741,36 +759,7 @@ const Products = () => {
           ],
           features: 'Top-tier option for critical applications'
         },
-        {
-          id: 218,
-          name: 'Chain Link Belt',
-          image: chainLinkImg,
-          description: 'Chain link design for heavy-duty industrial transport.',
-          specs: [
-            'Heavy-duty construction',
-            'Multiple chain options',
-            'High load capacity',
-            'Flexible routing',
-            'Low maintenance',
-            'Long service intervals'
-          ],
-          features: 'Workhorse for heavy industry'
-        },
-        {
-          id: 219,
-          name: 'Duplex Conveyor Belt',
-          image: duplexImg,
-          description: 'Duplex construction with dual-layer design for superior performance.',
-          specs: [
-            'Dual-layer construction',
-            'Maximum durability',
-            'Enhanced grip',
-            'Extended lifespan',
-            'Professional grade',
-            'Multiple material options'
-          ],
-          features: 'Premium solution for demanding environments'
-        }
+        
       ]
     }
   };

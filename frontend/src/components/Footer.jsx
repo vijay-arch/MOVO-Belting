@@ -11,6 +11,7 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4">
               <span className="text-blue-500">MOVO</span>BELTING
+              <span className="text-blue-100">    Industries</span>
             </h3>
             <p className="text-gray-400 text-sm mb-4">
               Complete Material Handling Systems and Belting Solutions for Industrial Applications
@@ -49,10 +50,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Products</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
-              <li>PVC/PU/PE Conveyor Belts</li>
-              <li>Timing Belts & Pulleys</li>
-              <li>All Type of Conveyors</li>
-              <li>System Integration and Automation</li>
+              <li>Material Handling Systems</li>
+              <li>System Integration & Automation</li>
+              <li>Belting Solutions</li>
+              <li>Industrial Rollers</li>
             </ul>
           </div>
 

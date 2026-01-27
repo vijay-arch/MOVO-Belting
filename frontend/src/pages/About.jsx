@@ -27,7 +27,7 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Movobelting Industries</h2>
             <p className="text-lg text-gray-600 mb-6">
-              Movobelting Industries is a leading provider of complete belting solutions for diverse
+              Movobelting Industries is a leading provider of complete Material Handling Systems, System integration & Automation and belting solutions for diverse
               industrial applications. With years of experience and expertise, we specialize in
               offering high-quality conveyor belts, timing belts, modular belts, and custom belting
               solutions.
