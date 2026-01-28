@@ -66,6 +66,28 @@ import peBeltImg from '../assets/pe-conveyor-belt.jpg';
 // Belting Solutions - Plastic Modular Belts
 import flatTopModularImg from '../assets/flat-top-modular-belt.jpg';
 import positrackModularImg from '../assets/positrac.jpg';
+import mbObpImg from '../assets/mb-opb.png';
+import mbObp1Img from '../assets/mb-opb-1.png';
+import mbObp2Img from '../assets/mb-opb-2.png';
+import mbObp3Img from '../assets/mb-opb-3.png';
+import mbObp4Img from '../assets/mb-opb-4.png';
+import mbMpbImg from '../assets/mb-mpb.png';
+import mbMpb1Img from '../assets/mb-mpb-1.png';
+import mbSmpbImg from '../assets/mb-smpb.png';
+import mbSmpb1Img from '../assets/mb-smpb-1.png';
+import mb2533Img from '../assets/mb-2533.png';
+import mb25331Img from '../assets/mb-2533-1.png';
+import mbS25Img from '../assets/mb-s25.png';
+import mbS251Img from '../assets/mb-s25-1.png';
+import mbS500Img from '../assets/mb-s500.png';
+import mb900Img from '../assets/mb-900.png';
+import mb9001Img from '../assets/mb-900-1.png';
+import mb940Img from '../assets/mb-940.png';
+import mb1000Img from '../assets/mb-1000.png';
+import mb10001Img from '../assets/MB-1000-1.png';
+// import mb2120Img from '../assets/mb-2120.png';
+import mb21201Img from '../assets/mb-2120-1.png';
+import mb21202Img from '../assets/MB-2120-2.png';
 
 // Belting Solutions - Compound Balanced Weave
 import lk6BeltImg from '../assets/lk-6.jpg';
@@ -213,17 +235,47 @@ const Products = () => {
           id: 10,
           name: 'Flexible Skate Wheel Conveyor',
           image: flexibleSkateImg,
-          description: 'Portable flexible skate conveyors that expand and bend to fit loading geometries.',
-          specs: ['Collapsible accordion design', 'Portable and lightweight', 'Ideal for temporary lines', 'Easy storage and deployment', 'Quick setup without tools'],
-          features: 'Excellent for seasonal operations and flexible warehousing'
+          description: 'MOVO is a leading brand in SKATE conveyors. We manufacture and supply all types of skate conveyors with GI, Plastic, and SS skates. These light-duty rigid-frame skate wheel conveyors are made from aluminum and are lighter than rigid-frame skate wheel conveyors made from steel. Well suited for job sites where conveyors will be disassembled and reconfigured often.',
+          specs: [
+            'Capacity: 50 kg/meter',
+            'Type: Skate Wheel',
+            'Available in GI, Plastic, and SS skates',
+            'Straight and curved sections available',
+            'Aluminum and steel frame options',
+            'Easy disassembly and reconfiguration'
+          ],
+          technicalData: {
+            'Capacity': '50 kg/meter',
+            'Type': 'Skate Wheel',
+            'Material': 'Cast Iron',
+            'Roller Material': 'Steel',
+            'Automation Grade': 'Semi-automatic',
+            'Application': 'Industrial'
+          },
+          features: 'Perfect for assembly lines, shipping departments, and stocking areas with firm, flat-bottom loads'
         },
         {
           id: 11,
           name: 'Flexible Roller Conveyor',
           image: flexibleRollerImg,
-          description: 'Flexible roller conveyors offering mobility with roller-based surface transport.',
-          specs: ['Telescopic flexible sections', 'Good for uneven floors', 'Portable and self-contained', 'Safe manual handling', 'Adjustable height'],
-          features: 'Perfect for truck loading and temporary installations'
+          description: 'Flexible Gravity Roller Conveyors are versatile, adaptable, and cost-effective material handling solutions. Gravity-powered with no electricity required, these conveyors offer flexible design for curved or straight configurations with adjustable legs for varying heights.',
+          specs: [
+            'Flexible design for curved or straight configurations',
+            'Gravity-powered, no electricity required',
+            'Roller diameter: 1.5"-4" (38-102 mm)',
+            'Frame: steel, aluminium, or stainless steel',
+            'Adjustable legs for varying heights',
+            'Easy installation and relocation'
+          ],
+          technicalData: {
+            'Length': 'up to 100 ft (30.5 m)',
+            'Width': '12"-48" (305-1219 mm)',
+            'Height': '24"-48" (610-1219 mm)',
+            'Capacity': '50-80 kg per meter',
+            'Speed': 'Variable, dependent on gravity and load',
+            'Maintenance': 'Low maintenance and operating costs'
+          },
+          features: 'Ideal for warehousing, manufacturing, packaging, food processing, and logistics with quiet, space-saving operation'
         },
       ]
     },
@@ -287,21 +339,35 @@ const Products = () => {
       products: [
         {
           id: 13,
-          name: 'Telescopic Belt Conveyor',
+          name: 'Telescopic Conveyor Systems',
           image: telescopicImg,
           images: [telescopicImg, telescopic2Img],
-          description: 'Extendable conveyors for loading/unloading trucks and containers with adjustable reach.',
-          specs: ['Variable length extension 2-5 meters', 'Hydraulic or electric drive', 'Low-profile retractable design', 'Adjustable speed control', 'Safety railings available'],
-          features: 'Essential for logistics and truck loading operations'
+          description: 'Our Telescopic Conveyor Systems are engineered to streamline truck loading and unloading operations with maximum efficiency and safety. Designed for warehouses, logistics hubs, e-commerce fulfillment centers, and industrial facilities, these conveyors extend deep inside the vehicle to reduce manual labor and loading time.',
+          specs: [
+            'Extendable multi-stage telescopic design',
+            'Suitable for loading & unloading trucks, containers, and trailers',
+            'Hydraulic/electric elevation for height adjustment',
+            'High-speed, smooth, and controlled conveying',
+            'Flexible length adjustment for various vehicle sizes',
+            'Rugged construction for long service life'
+          ],
+          features: 'Reduces manpower and loading time with optional add-ons: lighting, operator platforms, castor wheels, sensors, and automation integration'
         },
         {
           id: 14,
           name: 'Truck Loading & Unloading Conveyor',
           image: truckLoadingImg,
           images: [truckLoadingImg, truckLoading2Img, truckLoading3Img],
-          description: 'Specialized conveyors designed for efficient truck and trailer loading/unloading.',
-          specs: ['Telescopic or straight options', 'High throughput capacity', 'Adjustable height up to truck bed level', 'Safety features included', 'Durable construction'],
-          features: 'Maximizes loading dock efficiency'
+          description: 'Improve your logistics operations with our advanced Truck Loading & Unloading Conveyor Systems. Designed for continuous, hassle-free movement of goods, these conveyors offer telescopic reach, hydraulic height control, and flexible roller/belt options.',
+          specs: [
+            'Telescopic reach design',
+            'Hydraulic height control',
+            'Flexible roller/belt options',
+            'High throughput capacity',
+            'Reduced manual labor requirements',
+            'Smooth and continuous operation'
+          ],
+          features: 'Ideal for warehouses, MSMEs, e-commerce hubs, and manufacturing plants - speed up operations, reduce costs, and ensure smooth loading/unloading every single time'
         },
         {
           id: 15,
@@ -509,34 +575,172 @@ const Products = () => {
       products: [
         {
           id: 204,
-          name: 'Flat Top Modular Belt',
-          image: flatTopModularImg,
-          description: 'Interlocking plastic modules for smooth product transport.',
+          name: 'MB-OPB (Open Area Modular Belt)',
+          image: mbObpImg,
+          images: [mbObpImg, mbObp1Img, mbObp2Img, mbObp3Img, mbObp4Img],
+          description: 'Premium plastic modular belt featuring flat top and open area configurations with raised rib design. Engineered for high-impact environments and heavy-wear applications, this belt combines durability with easy maintenance. The open area design allows for superior drainage and airflow, making it ideal for wet processing environments.',
           specs: [
+            'Flat top, open area, and raised rib configurations',
+            'Designed to withstand high impact and wear',
+            'Finger plates available for enhanced grip',
             'Easy module replacement',
-            'Quick cleaning',
-            'Washdown compatible',
-            'Low noise operation',
+            'Superior drainage capability',
             'FDA approved materials',
-            'Multiple profile options'
+            'Washdown compatible'
           ],
-          features: 'Standard for food and beverage production'
+          features: 'Ideal for fruits/vegetable processing, washing lines, pasteurizers, and cooling lines'
         },
-        // {
-        //   id: 205,
-        //   name: 'Positrack Modular Belt',
-        //   image: positrackModularImg,
-        //   description: 'High-grip modular belt with positive drive features.',
-        //   specs: [
-        //     'Superior grip and control',
-        //     'Prevents product slipping',
-        //     'Ideal for inclined angles',
-        //     'Long service life',
-        //     'Easy to customize',
-        //     'Multiple material options'
-        //   ],
-        //   features: 'Perfect for steep incline and specialty applications'
-        // }
+        {
+          id: 205,
+          name: 'MB-MPB (Heavy Load Modular Belt)',
+          image: mbMpbImg,
+          images: [mbMpbImg, mbMpb1Img],
+          description: 'Robust plastic modular belt designed specifically for heavy-load meat and poultry processing applications. Features thick bottom support and optimized sprocket engagement configuration to handle demanding conveying tasks without breakage or slippage.',
+          specs: [
+            'Easy to clean - reduces water consumption',
+            'Sprocket engagement configured for high loads',
+            'Thick bottom support for increased load capacity',
+            'Extended service life',
+            'Designed for wet processing environments',
+            'Modular replacement system',
+            'Enhanced load-bearing capability'
+          ],
+          features: 'Perfect for meat deboning/cutting lines, poultry processing, dairy applications, and carton handling'
+        },
+        {
+          id: 206,
+          name: 'MB-SMPB (Sanitary Modular Belt)',
+          image: mbSmpbImg,
+          images: [mbSmpbImg, mbSmpb1Img],
+          description: 'Advanced sanitary plastic modular belt with special lock pin arrangement for simplified maintenance and minimized bacterial growth. Engineered for tight transfer applications in food-sensitive processing environments.',
+          specs: [
+            'Special lock pin arrangement for quick maintenance',
+            'Minimized bacterial growth design',
+            'Suits tight transfer applications',
+            'Food-grade materials',
+            'Easy to disassemble and reassemble',
+            'Enhanced hygiene standards',
+            'Low maintenance construction'
+          ],
+          features: 'Essential for meat/seafood processing, fruit/vegetable handling, and biscuit/confectionery production'
+        },
+        {
+          id: 207,
+          name: 'MB-2533 (Safety Grid Modular Belt)',
+          image: mb2533Img,
+          images: [mb2533Img, mb25331Img],
+          description: 'Premium safety-focused plastic modular belt featuring flush grid configuration with rounded edges throughout the belt surface. Incorporates special sprocket design to prevent slippage and enhance load carrying capacity for various food processing applications.',
+          specs: [
+            'Flat top and flush grid configuration',
+            'Rounded edges across belt for operator safety',
+            'Special sprocket design prevents belt slip',
+            'Enhanced load carrying capacity',
+            'High-speed capable',
+            'Modular replacement system',
+            'Safe operation design'
+          ],
+          features: 'Ideal for bakery operations, meat/poultry processing, and can handling systems'
+        },
+        {
+          id: 208,
+          name: 'MB-S25 (Cooling & Drainage Belt)',
+          image: mbS25Img,
+          images: [mbS25Img, mbS251Img],
+          description: 'Specialized open area plastic modular belt designed for enhanced cooling and drainage in direct food contact applications. Perfect for processes requiring rapid cooling or water removal with continuous product flow.',
+          specs: [
+            'Open area design for enhanced cooling and draining',
+            'Suited for direct food contact lines',
+            'Excellent moisture removal capability',
+            'High-speed operation compatible',
+            'FDA food-safe materials',
+            'Modular construction',
+            'Low maintenance design'
+          ],
+          features: 'Perfect for fruit/vegetable processing, meat/seafood handling, and deep freeze applications'
+        },
+        {
+          id: 209,
+          name: 'MB-S500 (Heavy-Duty Drainage Belt)',
+          image: mbS500Img,
+          description: 'Heavy-duty open area plastic modular belt engineered for applications requiring maximum drainage and air circulation. Supports both horizontal and inclined conveying with superior product handling characteristics.',
+          specs: [
+            'Open area design for enhanced cooling and draining',
+            'Suited for direct food contact lines',
+            'Incline-capable design',
+            'Maximum drainage efficiency',
+            'FDA compliant materials',
+            'Heavy-duty construction',
+            'Vertical/inclined application support'
+          ],
+          features: 'Excellent for fruit/vegetable processing, seafood handling, and inclined product handling'
+        },
+        {
+          id: 210,
+          name: 'MB-900 (Precision Transfer Belt)',
+          image: mb900Img,
+          images: [mb900Img, mb9001Img],
+          description: 'High-precision plastic modular belt with reduced gap design between links to prevent product slipping and ensure tight transfers. Features compatibility with nose bar configurations and exceptional wear resistance for demanding industrial environments.',
+          specs: [
+            'Reduced gap between links - prevents product slip',
+            'Compatible for nose bar tight transfer',
+            'High wear resistance construction',
+            'Precision sprocket engagement',
+            'Consistent spacing design',
+            'Modular replacement capability',
+            'Extended service intervals'
+          ],
+          features: 'Ideal for glass bottle case packing, bearing conveying, check weigher lines, metal detectors, and seafood handling'
+        },
+        {
+          id: 211,
+          name: 'MB-940 (Turning/Curve Belt)',
+          image: mb940Img,
+          description: 'Specialized plastic modular turning belt designed for curved conveyor sections with smooth direction changes. Maintains product integrity while executing tight radius turns in multi-directional production lines.',
+          specs: [
+            'Designed for curved conveyor sections',
+            'Smooth turning capability',
+            'Maintains product orientation during curves',
+            'Flexible construction',
+            'Low friction turning',
+            'Modular turning sections',
+            'Compatible with standard modular systems'
+          ],
+          features: 'Perfect for production lines requiring multi-directional routing and space-efficient layout optimization'
+        },
+        {
+          id: 212,
+          name: 'MB-1000 (Versatile Food Processing Belt)',
+          image: mb1000Img,
+          images: [mb1000Img, mb10001Img],
+          description: 'Versatile open area plastic modular belt offering enhanced cooling and drainage for diverse food processing and packaging applications. Delivers reliable performance across various industries requiring continuous, hygienic material handling.',
+          specs: [
+            'Open area design for enhanced cooling and draining',
+            'Suited for direct food contact lines',
+            'Versatile application design',
+            'FDA food-safe materials',
+            'High-speed compatible',
+            'Easy module replacement',
+            'Superior drainage efficiency'
+          ],
+          features: 'Suitable for fruit/vegetable processing, meat/seafood handling, bottle/carton conveyance, and shrink wrapping'
+        },
+        {
+          id: 213,
+          name: 'MB-2120 (Lightweight Precision Belt)',
+          image: mb21201Img,
+          images: [mb21201Img, mb21202Img],
+          description: 'Lightweight plastic modular belt featuring reduced gap link design for precise product control without slipping. Engineered for nose bar tight transfer applications and exceptional wear resistance in high-speed light-load environments.',
+          specs: [
+            'Reduced gap between links - prevents product slip',
+            'Compatible for nose bar tight transfer',
+            'High wear resistance',
+            'Lightweight construction',
+            'Precision load control',
+            'Extended durability',
+            'High-speed operation capable'
+          ],
+          features: 'Ideal for glass bottle case packing, shrink wrapping operations, and lightweight product handling'
+        }
       ]
     },
     'compound-balanced-weave': {
