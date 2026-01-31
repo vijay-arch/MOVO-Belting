@@ -205,11 +205,16 @@ const ProductDetail = () => {
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Overview</h3>
               <p className="text-gray-700 leading-relaxed">{product.description}</p>
+              {product.overview && (
+                <div className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                  <p className="text-gray-700 text-sm leading-relaxed">{product.overview}</p>
+                </div>
+              )}
             </div>
 
             {/* Features */}
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Features</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Key Features</h3>
               <p className="text-gray-700 leading-relaxed mb-4">{product.features}</p>
               {product.specs && (
                 <div>
@@ -217,8 +222,8 @@ const ProductDetail = () => {
                   <ul className="space-y-2">
                     {product.specs.map((spec, idx) => (
                       <li key={idx} className="flex items-start space-x-2 text-gray-700">
-                        <span className="text-green-600 font-bold">→</span>
-                        <span>{spec}</span>
+                        <span className="text-green-600 font-bold">✓</span>
+                        <span className="text-sm">{spec}</span>
                       </li>
                     ))}
                   </ul>
@@ -227,18 +232,47 @@ const ProductDetail = () => {
             </div>
           </div>
 
+          {/* Product Advantages Section */}
+          {product.advantages && (
+            <div className="mt-8 pt-8 border-t border-gray-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Why Choose This Product</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {product.advantages.map((adv, idx) => (
+                  <div key={idx} className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-4 border border-green-300">
+                    <h4 className="font-semibold text-green-900 mb-2">✓ {adv.title}</h4>
+                    <p className="text-sm text-green-800">{adv.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Applications */}
           {product.applications && (
             <div className="mt-8 pt-8 border-t border-gray-200">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Applications</h3>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Industrial Applications</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {product.applications.map((app, idx) => (
-                  <li key={idx} className="flex items-center space-x-2 text-gray-700">
-                    <span className="text-blue-600">•</span>
-                    <span>{app}</span>
-                  </li>
+                  <div key={idx} className="flex items-start space-x-3 bg-gray-50 p-3 rounded-lg">
+                    <span className="text-blue-600 font-bold text-xl">→</span>
+                    <span className="text-gray-700">{app}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
+            </div>
+          )}
+
+          {/* Industries Section */}
+          {product.industries && (
+            <div className="mt-8 pt-8 border-t border-gray-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Industries Served</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                {product.industries.map((ind, idx) => (
+                  <div key={idx} className="bg-indigo-50 rounded-lg p-3 border border-indigo-200 text-center">
+                    <p className="text-sm font-semibold text-indigo-900">{ind}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
 
@@ -248,8 +282,33 @@ const ProductDetail = () => {
               <h3 className="text-xl font-bold text-gray-900 mb-4">Key Benefits</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {product.benefits.map((benefit, idx) => (
-                  <div key={idx} className="bg-blue-50 rounded-lg p-4 border border-blue-200">
-                    <p className="text-gray-700">{benefit}</p>
+                  <div key={idx} className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-4 border-l-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow">
+                    <p className="text-gray-700 font-medium text-sm leading-relaxed">{benefit}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Construction & Material Section */}
+          {product.construction && (
+            <div className="mt-8 pt-8 border-t border-gray-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Construction & Material Quality</h3>
+              <div className="bg-gray-50 rounded-lg p-6 border border-gray-300">
+                <p className="text-gray-700 leading-relaxed">{product.construction}</p>
+              </div>
+            </div>
+          )}
+
+          {/* Performance Characteristics */}
+          {product.performance && (
+            <div className="mt-8 pt-8 border-t border-gray-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Performance Characteristics</h3>
+              <div className="space-y-3">
+                {product.performance.map((perf, idx) => (
+                  <div key={idx} className="flex items-start space-x-3">
+                    <span className="text-purple-600 font-bold text-lg">◆</span>
+                    <p className="text-gray-700">{perf}</p>
                   </div>
                 ))}
               </div>

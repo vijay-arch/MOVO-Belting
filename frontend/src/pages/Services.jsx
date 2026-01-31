@@ -5,74 +5,79 @@ const Services = () => {
   const services = [
     {
       icon: <Wrench size={48} />,
-      title: 'Material Handling System Design',
-      description: 'Complete design and consultation for conveyor and material handling systems',
+      category: '★ MATERIAL HANDLING SYSTEMS ★',
+      title: 'Conveyor System Design & Installation',
+      description: 'Complete design and installation for all types of conveyor and material handling systems',
       features: [
         'Belt Conveyor System Design',
         'Roller & Modular Conveyor Solutions',
         'Specialized Systems (Slat, Chain, Overhead)',
         'Custom Conveyor Engineering',
-        'System Layout & Optimization',
-      ],
-    },
-    {
-      icon: <Wrench size={48} />,
-      title: 'Installation & Commissioning',
-      description: 'Professional installation, setup, and commissioning of all conveyor systems',
-      features: [
-        'Belt Installation & Tensioning',
-        'Roller & Modular Conveyor Setup',
-        'Overhead & Specialized System Installation',
-        'System Testing & Validation',
-        'Operator Training',
-      ],
-    },
-    {
-      icon: <Wrench size={48} />,
-      title: 'Maintenance & Support Services',
-      description: 'Comprehensive preventive and corrective maintenance for all belt systems',
-      features: [
-        'Regular Maintenance Programs',
-        'Belt Repair & Splicing',
-        'Wear Inspection & Replacement',
-        'Emergency Technical Support',
-        'Scheduled Maintenance Plans',
-      ],
-    },
-    {
-      icon: <Eye size={48} />,
-      title: 'Custom Belt Solutions',
-      description: 'Tailored belting solutions designed for specific industrial requirements',
-      features: [
-        'PUC/PU/PE Conveyor Belts',
-        'Plastic Modular Belts',
-        'Specialty Belts (Wire Mesh, High Temperature)',
-        'Timing Belts & Power Transmission',
-        'Custom Coating & Specification',
+        'Professional Installation & Commissioning',
       ],
     },
     {
       icon: <Cpu size={48} />,
-      title: 'Automation & Control Systems',
-      description: 'Advanced industrial automation solutions for production optimization',
+      category: '★ SYSTEM INTEGRATION & AUTOMATION ★',
+      title: 'Advanced Automation Solutions',
+      description: 'Industry 4.0 ready automation with comprehensive control and monitoring systems',
       features: [
         'PLC-Based Control Systems',
         'HMI Touchscreen Integration',
         'SCADA System Implementation',
         'Real-time Monitoring & Analytics',
-        'Industry 4.0 Integration',
+        'IoT & Industry 4.0 Integration',
+      ],
+    },
+    {
+      icon: <Eye size={48} />,
+      category: '★ BELTING SOLUTIONS ★',
+      title: 'Custom Belt Solutions & Support',
+      description: 'Tailored belting solutions designed for specific industrial requirements with expert support',
+      features: [
+        'PVC/PU/PE Conveyor Belts',
+        'Plastic Modular Belt Systems',
+        'Specialty Belts (Wire Mesh, High Temp)',
+        'Timing Belts & Power Transmission',
+        'Belt Repair, Splicing & Maintenance',
+      ],
+    },
+    
+    {
+      icon: <Settings size={48} />,
+      category: '★ INDUSTRIAL ROLLERS ★',
+      title: 'Industrial Roller Solutions',
+      description: 'Comprehensive selection and installation of high-performance industrial roller systems',
+      features: [
+        'Troughing & Carrying Idler Selection',
+        'Impact & Self-Aligning Rollers',
+        'Gravity Rollers Installation',
+        'Conveyor Pulley Systems',
+        'Roller Maintenance & Replacement',
+      ],
+    },
+    {
+      icon: <Wrench size={48} />,
+      title: 'Comprehensive Maintenance & Support',
+      description: 'Full-service preventive and corrective maintenance for all systems',
+      features: [
+        'Regular Maintenance Programs',
+        'Belt & Roller Inspection',
+        'System Performance Optimization',
+        'Emergency Technical Support',
+        'Scheduled Preventive Maintenance Plans',
       ],
     },
     {
       icon: <Settings size={48} />,
-      title: 'System Integration Services',
-      description: 'End-to-end integration of conveyors with existing production systems',
+      title: 'System Integration & Optimization',
+      description: 'End-to-end integration of all systems for maximum production efficiency',
       features: [
         'Multi-System Coordination',
         'Diverting & Sorting Solutions',
         'Production Line Automation',
         'Safety System Integration',
-        'System Upgrade & Optimization',
+        'Complete System Upgrade Services',
       ],
     },
   ];
@@ -96,8 +101,13 @@ const Services = () => {
             {services.map((service, idx) => (
               <div
                 key={idx}
-                className="bg-gray-50 rounded-xl p-8 hover:shadow-2xl transition-all duration-300 card-hover"
+                className={`rounded-xl p-8 hover:shadow-2xl transition-all duration-300 card-hover ${
+                  service.category ? 'bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-400' : 'bg-gray-50'
+                }`}
               >
+                {service.category && (
+                  <div className="text-blue-700 text-sm font-bold mb-3">{service.category}</div>
+                )}
                 <div className="text-blue-600 mb-6">{service.icon}</div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">{service.title}</h3>
                 <p className="text-gray-600 mb-6">{service.description}</p>
@@ -106,6 +116,52 @@ const Services = () => {
                     <li key={i} className="flex items-start space-x-3">
                       <span className="text-blue-600 mt-1 text-xl">✓</span>
                       <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Key Categories Highlight */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
+            Our Four Core Expertise Areas
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: '📦',
+                title: 'Material Handling Systems',
+                items: ['Belt Conveyors', 'Roller Systems', 'Modular Conveyors', 'Specialty Systems']
+              },
+               {
+                icon: '🤖',
+                title: 'System Integration & Automation',
+                items: ['PLC Controls', 'HMI Systems', 'SCADA Solutions', 'Industry 4.0']
+              },
+              {
+                icon: '🎯',
+                title: 'Belting Solutions',
+                items: ['PVC/PU Belts', 'Modular Belts', 'Specialty Belts', 'Timing Belts']
+              },
+             
+              {
+                icon: '⚙️',
+                title: 'Industrial Rollers',
+                items: ['Troughing Idlers', 'Carrying Rollers', 'Gravity Rollers', 'Conveyor Pulleys']
+              },
+            ].map((category, idx) => (
+              <div key={idx} className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 border-2 border-blue-300 hover:shadow-lg transition-all">
+                <div className="text-4xl mb-3">{category.icon}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{category.title}</h3>
+                <ul className="space-y-2">
+                  {category.items.map((item, i) => (
+                    <li key={i} className="text-sm text-gray-700 flex items-center">
+                      <span className="text-blue-600 mr-2">✓</span>{item}
                     </li>
                   ))}
                 </ul>

@@ -9,21 +9,28 @@ const Home = () => {
     
     {
       title: 'Material Handling Systems',
-      subtitle: 'Precision Power Transmission',
-      description: 'At Movobelting Industries, we manufacture every type of conveyor using advanced engineering designs and complete in-house equipment ensuring superior quality, faster delivery, and reliable performance',
+      subtitle: 'Complete Conveyor Solutions',
+      description: 'At Movobelting Industries, we manufacture every type of conveyor using advanced engineering designs and complete in-house equipment ensuring superior quality, faster delivery, and reliable performance. From belt conveyors to modular systems, we deliver industry-leading material handling solutions.',
       features: ['Engineered for reliability', 'Built to last', 'Performance you can trust'],
     },
+    
     {
-      title: 'System Integrations and Automation',
-      subtitle: '',
-      description: 'Movobelting Industries proudly works under the technical expertise and industry experience of our parent company, SS Automation. Their continued support strengthens our ability to deliver high-performance advanced automation solutions',
-      features: ['Reliable power distribution and protection', 'Modular and scalable panel architecture', 'Centralized monitoring and control'],
+      title: 'System Integration & Automation',
+      subtitle: 'Industry 4.0 Ready Solutions',
+      description: 'Movobelting Industries proudly works under the technical expertise of SS Automation. We deliver high-performance automation solutions with PLC controls, HMI integration, and SCADA systems for complete production optimization.',
+      features: ['Advanced control systems', 'Real-time monitoring', 'IoT integration capabilities'],
     },
     {
       title: 'Complete Belting Solutions',
-      subtitle: 'Advanced Conveying Solutions',
-      description: 'For specific requirements, we collaborate with our trusted vendors and trade conveyor belts on a B2B basis, ensuring high-quality products and dependable supply.',
+      subtitle: 'Specialized Conveyor Belts',
+      description: 'Comprehensive range of PVC/PU belts, plastic modular belts, specialty belts, and compound balanced weave solutions. Every belt engineered for specific industrial requirements with proven durability.',
       features: ['Engineered for long service life', 'End-to-end solution reliability', 'Quality tested, field proven'],
+    },
+    {
+      title: 'Industrial Rollers & Components',
+      subtitle: 'Precision Roller Systems',
+      description: 'Newly expanded category featuring high-performance industrial rollers including troughing idlers, carrying rollers, impact rollers, and specialty components. Engineered for durability and efficiency in the most demanding applications.',
+      features: ['Premium quality construction', 'Extended service life', 'Reduced maintenance costs'],
     },
   ];
 
@@ -137,13 +144,12 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Complete Conveyor and Belting Solutions
+              Complete Material Handling & Conveyor Solutions
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Movobelting Industries provides comprehensive conveyor and belting solutions for diverse industrial
-              applications. From conveyor belts to timing belts, modular belts to heavy-duty solutions,
-              we offer state-of-the-art products that enhance your production efficiency.
-            </p>
+Movobelting Industries is a trusted provider of Material Handling Systems, System Integration & Automation, Belting Solutions, and Industrial Rollers for modern industries. We design, manufacture, and integrate high-performance conveyor systems that streamline operations, maximize productivity, and ensure long-term reliability.
+
+From precision-engineered belts and industrial rollers to fully automated, custom-built handling systems, our solutions are built to move your business forward—efficiently, safely, and seamlessly.            </p>
             <Link
               to="/about"
               className="inline-flex items-center space-x-2 text-blue-600 font-semibold hover:text-blue-700"
@@ -163,22 +169,27 @@ const Home = () => {
             <p className="text-lg text-gray-600">Industry-leading belting solutions</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 title: 'Material Handling Systems',
-                description: 'At Movobelting Industries, we manufacture every type of conveyor using advanced engineering designs and complete in-house equipment ensuring superior quality, faster delivery, and reliable performance',
-                features: ['Modular conveyor design for flexible layouts', 'High load capacity with smooth material flow', 'Low-maintenance and safety-compliant design'],
+                description: 'Advanced conveyor systems including belt, roller, modular, and specialized conveyors. Engineered with precision for reliability and efficiency in all industrial applications.',
+                features: ['Belt & Roller Conveyors', 'Modular Systems', 'Specialty Conveyors', 'Custom Designs'],
               },
               {
-                title: 'System Integration and Automation',
-                description: 'Movobelting Industries proudly works under the technical expertise and industry experience of our parent company, SS Automation. Their continued support strengthens our ability to deliver high-performance advanced automation solutions',
-                features: ['Custom electrical control panel solutions', 'PLC-based control and automation architecture', 'Seamless integration of conveyors, drives, and sensors'],
+                title: 'System Integration & Automation',
+                description: 'Advanced automation with PLC controls, HMI interfaces, and SCADA systems. Complete production optimization with Industry 4.0 ready solutions.',
+                features: ['PLC Control Systems', 'HMI Touchscreens', 'SCADA Solutions', 'IoT Integration'],
               },
               {
-                title: 'Complete belt Solutions',
-                description: 'Comprehensive range of specialized conveyor belts for every application and For specific requirements, we collaborate with our trusted vendors and trade conveyor belts on a B2B basis, ensuring high-quality products and dependable supply.',
-                features: ['Wide range of industrial conveyor belts', 'Resistant to heat, oil, and chemicals', 'Long service life with minimal downtime', 'Application-specific belt material selection'],
+                title: 'Belting Solutions',
+                description: 'Complete range of PVC/PU belts, plastic modular belts, specialty belts, and compound balanced weave solutions. Every belt meets international quality standards.',
+                features: ['PVC/PU Belts', 'Modular Belts', 'Specialty Belts', 'Timing Belts'],
+              },
+              {
+                title: 'Industrial Rollers',
+                description: 'High-performance rollers for belt support and material handling. Features troughing idlers, carrying rollers, impact rollers, gravity rollers, and conveyor pulleys.',
+                features: ['Troughing Idlers', 'Carrying Rollers', 'Gravity Rollers', 'Conveyor Pulleys'],
               },
             ].map((product, idx) => (
               <div
