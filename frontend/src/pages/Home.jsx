@@ -10,7 +10,7 @@ const Home = () => {
     {
       title: 'Material Handling Systems',
       subtitle: 'Complete Conveyor Solutions',
-      description: 'At Movobelting Industries, we manufacture every type of conveyor using advanced engineering designs and complete in-house equipment ensuring superior quality, faster delivery, and reliable performance. From belt conveyors to modular systems, we deliver industry-leading material handling solutions.',
+      description: 'At Movobelting Industries, we manufacture all type of conveyor using advanced engineering designs and complete in-house equipment ensuring superior quality, faster delivery, and reliable performance. From belt conveyors to modular systems, we deliver industry-leading material handling solutions.',
       features: ['Engineered for reliability', 'Built to last', 'Performance you can trust'],
     },
     
@@ -144,12 +144,12 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Complete Material Handling & Conveyor Solutions
+Material Handling Systems & Integration and Automation Solutions
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-Movobelting Industries is a trusted provider of Material Handling Systems, System Integration & Automation, Belting Solutions, and Industrial Rollers for modern industries. We design, manufacture, and integrate high-performance conveyor systems that streamline operations, maximize productivity, and ensure long-term reliability.
-
-From precision-engineered belts and industrial rollers to fully automated, custom-built handling systems, our solutions are built to move your business forward—efficiently, safely, and seamlessly.            </p>
+At MOVOBELTING INDUSTRIES, we specialize in designing and manufacturing advanced conveyor systems and delivering integrated automation solutions that improve efficiency, reduce manpower, and optimize material handling processes across industries.
+With deep expertise in conveyor technology and system integration, we provide customized solutions for loading, unloading, packaging, sorting, and production line automation. Our systems are engineered for reliability, low maintenance, and high performance, helping businesses save time, reduce operational costs, and increase productivity.
+</p>
             <Link
               to="/about"
               className="inline-flex items-center space-x-2 text-blue-600 font-semibold hover:text-blue-700"

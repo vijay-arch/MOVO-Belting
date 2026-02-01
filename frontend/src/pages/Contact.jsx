@@ -115,7 +115,7 @@ Industrail Estate Udyambag   Belgaum 590008                   <br />
                     <p className="text-gray-600">
                       movobelting@gmail.com
                       <br />
-                      movoindustries@gmail.com
+                      info@movobelting.in
                     </p>
                   </div>
                 </div>
@@ -124,7 +124,7 @@ Industrail Estate Udyambag   Belgaum 590008                   <br />
               {/* Map */}
               <div className="mt-8 rounded-xl overflow-hidden shadow-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3837.6654!2d74.5137!3d15.8497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDUwJzU5LjAiTiA3NMKwMzAnNDkuMyJF!5e0!3m2!1sen!2sin!4v1234567890"
+                  src="https://maps.app.goo.gl/KxfCtanJeZM8G1ct7?g_st=awb"
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
