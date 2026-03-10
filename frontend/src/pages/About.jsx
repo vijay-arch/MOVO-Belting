@@ -1,5 +1,6 @@
 import React from 'react';
 import { Target, Eye, Award } from 'lucide-react';
+import movoImage from '../assets/movo_image.jpeg';
 
 const About = () => {
   return (
@@ -16,26 +17,27 @@ const About = () => {
       <section 
         className="py-20 relative"
         style={{
-          // backgroundImage: `url(${require('../assets/movo-team.jpeg')})`,
+          backgroundImage: `url(${movoImage})`,
+          backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
         }}
       >
-        <div className="absolute inset-0 bg-white/85 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Movobelting Industries</h2>
-            <p className="text-lg text-gray-600 mb-6">
+            <h2 className="text-4xl font-bold text-white mb-6 drop-shadow-lg">Movobelting Industries</h2>
+            <p className="text-lg text-white opacity-95 mb-6 drop-shadow">
               Movobelting Industries is a leading provider of complete Material Handling Systems, Industrial Rollers, System Integration & Automation, and belting solutions for diverse industrial applications. With years of experience and expertise, we specialize in offering high-quality conveyor systems, industrial rollers, conveyor belts, modular belts, and custom automation solutions.
             </p>
-            <p className="text-lg text-gray-600 mb-6">
+            <p className="text-lg text-white opacity-95 mb-6 drop-shadow">
               We partner with globally acknowledged suppliers to bring you the best-in-class products
               that meet international standards. Our comprehensive range covers everything from light-duty
               to heavy-duty applications across various industries including food processing, automotive,
               pharmaceuticals, textiles, and manufacturing.
             </p>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-white opacity-95 drop-shadow">
               At Movobelting, we don't just supply belts and rollers – we provide complete material handling systems, industrial roller components, and automation solutions tailored to your specific needs. Our comprehensive Industrial Rollers category, combined with our proven Material Handling Systems, Belting Solutions, and System Integration expertise, ensures complete solutions for every industrial requirement. Our commitment to quality, innovation, and customer satisfaction has made us a trusted partner for businesses across India.
             </p>
           </div>

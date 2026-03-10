@@ -9,6 +9,9 @@ import inclinedBelt2Img from '../assets/inclined-belt-conveyor-2.jpeg';
 import declinedBeltImg from '../assets/declined-belt-conveyor.jpeg';
 import curveBeltImg from '../assets/curve-conveyor.jpeg';
 import aluminumBeltImg from '../assets/aluminum-belt-conveyor.jpeg';
+import rubberConveyor01Img from '../assets/rubber_conveyor01.jpeg';
+import rubberConveyor02Img from '../assets/rubber_conveyor02.jpeg';
+import rubberConveyor03Img from '../assets/rubber_conveyor03.jpeg';
 
 // Material Handling Systems - Roller Conveyors
 import freeRollerImg from '../assets/free-roller-conveyor.jpeg';
@@ -448,6 +451,46 @@ const Products = () => {
           ],
           features: 'Perfect for food, pharmaceutical, and hygiene-sensitive industries'
         },
+      ]
+    },
+    'rubber-conveyor-system': {
+      title: 'Rubber Conveyor System for Mining',
+      description: 'Heavy-duty rubber belt conveyor optimized for mining and bulk material handling applications',
+      products: [
+        {
+          id: 100,
+          name: 'Rubber Conveyor System for Mining',
+          image: rubberConveyor03Img,
+          images: [rubberConveyor03Img , rubberConveyor02Img, rubberConveyor01Img],
+          description: 'A robust, high-capacity rubber conveyor engineered specifically for mining operations and bulk material transfer. Combines reinforced carcass construction, abrasion-resistant rubber compounds, large-diameter pulleys and heavy-duty idlers to ensure long service life in harsh environments.',
+          specs: [
+            'Reinforced carcass with multiple plies',
+            'Abrasion-resistant rubber compounds (SBR/NR or custom blends)',
+            'Width: 500mm - 2000mm (custom available)',
+            'Drive: high-torque gearbox with soft-start VFD options',
+            'Pulley: large-diameter drive and return pulleys',
+            'Idlers: heavy-duty troughing and return idlers',
+            'Tensioning: screw or automatic take-up systems',
+            'Belt splices: vulcanized or mechanical as required',
+            'Optional cleats, sidewalls and skirts for containment'
+          ],
+          overview: 'Designed for continuous, high-throughput conveying of ore, aggregate and other mining materials. This system reduces downtime with rugged components and offers configurations for inclined, horizontal and overland applications.',
+          advantages: [
+            { title: 'High Capacity', description: 'Built to handle large tonnages with minimal belt stretch' },
+            { title: 'Abrasion & Impact Resistance', description: 'Specialized compounds and carcass reduce wear in abrasive environments' },
+            { title: 'Low Downtime', description: 'Heavy-duty components and accessible maintenance points reduce service time' },
+            { title: 'Adaptable', description: 'Options for cleats, sidewalls, and skirt sealing for specific material control' }
+          ],
+          applications: [
+            'Open-pit and underground mining conveyors',
+            'Overland and transfer conveyors',
+            'Stockpile feed and reclaim systems',
+            'Primary and secondary crushing feed',
+            'Aggregate and quarry operations'
+          ],
+          industries: ['Mining', 'Aggregates', 'Heavy Industry'],
+          features: 'Reinforced carcass, abrasion-resistant compound, heavy-duty pulleys/idlers, cleat and containment options'
+        }
       ]
     },
     'roller-conveyors': {
