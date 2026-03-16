@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import movoLogo from '../assets/movo_logo.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,12 +33,12 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-gray-900">
+          <Link to="/" className="flex items-center space-x-3">
+            <img src={movoLogo} alt="MOVO logo" className="w-10 h-10 object-contain" />
+            <div className="text-2xl font-bold text-gray-900 leading-none">
               <span>MOVO</span>
-              <span className="ml-1">BELTING</span><br />
+              <span className="ml-1">BELTING</span>
             </div>
-        
           </Link>
 
           {/* Desktop Navigation */}

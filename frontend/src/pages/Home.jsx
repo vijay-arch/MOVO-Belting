@@ -1,5 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import materialHandlingImg from '../assets/material_handling_system.jpeg';
+import integrationImg from '../assets/system_intigrtion_automation.jpeg';
+import beltingImg from '../assets/complete_belting_solution.jpeg';
+import rollerImg from '../assets/industrial_roller_solution.jpeg';
+import itzuLogo from '../assets/itzu_logo.png';
+import kingsLogo from '../assets/kings_logo.jpg';
+import vegaLogo from '../assets/vega_logo.jpg';
+import jubilanLogo from '../assets/jubilan_logo.png';
+import ufiLogo from '../assets/ufi_logo.png';
+import adityaaMilkLogo from '../assets/adityaa_milk_logo.png';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 
 const Home = () => {
@@ -10,6 +20,7 @@ const Home = () => {
     {
       title: 'Material Handling Systems',
       subtitle: 'Complete Conveyor Solutions',
+      image: materialHandlingImg,
       description: 'At Movobelting Industries, we manufacture all type of conveyor using advanced engineering designs and complete in-house equipment ensuring superior quality, faster delivery, and reliable performance. From belt conveyors to modular systems, we deliver industry-leading material handling solutions.',
       features: ['Engineered for reliability', 'Built to last', 'Performance you can trust'],
     },
@@ -17,18 +28,21 @@ const Home = () => {
     {
       title: 'System Integration & Automation',
       subtitle: 'Industry 4.0 Ready Solutions',
+      image: integrationImg,
       description: 'Movobelting Industries proudly works under the technical expertise of SS Automation. We deliver high-performance automation solutions with PLC controls, HMI integration, and SCADA systems for complete production optimization.',
       features: ['Advanced control systems', 'Real-time monitoring', 'IoT integration capabilities'],
     },
     {
       title: 'Complete Belting Solutions',
       subtitle: 'Specialized Conveyor Belts',
+      image: beltingImg,
       description: 'Comprehensive range of PVC/PU belts, plastic modular belts, specialty belts, and compound balanced weave solutions. Every belt engineered for specific industrial requirements with proven durability.',
       features: ['Engineered for long service life', 'End-to-end solution reliability', 'Quality tested, field proven'],
     },
     {
       title: 'Industrial Rollers & Components',
       subtitle: 'Precision Roller Systems',
+      image: rollerImg,
       description: 'Newly expanded category featuring high-performance industrial rollers including troughing idlers, carrying rollers, impact rollers, and specialty components. Engineered for durability and efficiency in the most demanding applications.',
       features: ['Premium quality construction', 'Extended service life', 'Reduced maintenance costs'],
     },
@@ -52,7 +66,11 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Slider */}
-      <section className="relative h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 overflow-hidden">
+      <section
+        className="relative h-screen overflow-hidden bg-cover bg-center"
+        style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
+      >
+        <div className="absolute inset-0 bg-black/55"></div>
         {/* Animated Gears */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute top-20 right-10 w-32 h-32 opacity-10">
@@ -245,6 +263,40 @@ With deep expertise in conveyor technology and system integration, we provide cu
                 <h3 className="text-lg font-semibold text-gray-900">{application}</h3>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Clients / Served Companies (Marquee) */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-6">
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">Our Served Clients</h2>
+            <p className="text-gray-600">Trusted partners across industries</p>
+          </div>
+
+          <div className="overflow-hidden">
+            <div className="animate-marquee">
+              {[
+                itzuLogo,
+                kingsLogo,
+                vegaLogo,
+                jubilanLogo,
+                ufiLogo,
+                adityaaMilkLogo,
+              ].concat([
+                itzuLogo,
+                kingsLogo,
+                vegaLogo,
+                jubilanLogo,
+                ufiLogo,
+                adityaaMilkLogo,
+              ]).map((logo, idx) => (
+                <div key={idx} className="marquee-item flex-shrink-0 w-32 md:w-40 lg:w-48 flex items-center justify-center">
+                  <img src={logo} alt={`client-${idx}`} className="max-h-12 md:max-h-16 lg:max-h-20 object-contain" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -1,5 +1,11 @@
 import React from 'react';
-import { Settings, Wrench, Cpu, Eye } from 'lucide-react';
+import { Settings, Wrench, Cpu, Eye, Menu } from 'lucide-react';
+import conveyorImg from '../assets/conveyor_system_design_installation.jpeg';
+import automationImg from '../assets/advance_automation_solutoin.jpeg';
+import beltImg from '../assets/custom_belt_solution_support.jpeg';
+import rollerImg from '../assets/industrial_roller_solution.jpeg';
+import maintenanceImg from '../assets/maintainance_support.jpeg';
+import integrationImg from '../assets/system_intigration_optimization.jpeg';
 
 const Services = () => {
   const services = [
@@ -7,6 +13,7 @@ const Services = () => {
       icon: <Wrench size={48} />,
       category: '★ MATERIAL HANDLING SYSTEMS ★',
       title: 'Conveyor System Design & Installation',
+      image: conveyorImg,
       description: 'Complete design and installation for all types of conveyor and material handling systems',
       features: [
         'Belt Conveyor System Design',
@@ -20,6 +27,7 @@ const Services = () => {
       icon: <Cpu size={48} />,
       category: '★ SYSTEM INTEGRATION & AUTOMATION ★',
       title: 'Advanced Automation Solutions',
+      image: automationImg,
       description: 'Industry 4.0 ready automation with comprehensive control and monitoring systems',
       features: [
         'PLC-Based Control Systems',
@@ -33,6 +41,7 @@ const Services = () => {
       icon: <Eye size={48} />,
       category: '★ BELTING SOLUTIONS ★',
       title: 'Custom Belt Solutions & Support',
+      image: beltImg,
       description: 'Tailored belting solutions designed for specific industrial requirements with expert support',
       features: [
         'PVC/PU/PE Conveyor Belts',
@@ -47,6 +56,7 @@ const Services = () => {
       icon: <Settings size={48} />,
       category: '★ INDUSTRIAL ROLLERS ★',
       title: 'Industrial Roller Solutions',
+      image: rollerImg,
       description: 'Comprehensive selection and installation of high-performance industrial roller systems',
       features: [
         'Troughing & Carrying Idler Selection',
@@ -59,6 +69,7 @@ const Services = () => {
     {
       icon: <Wrench size={48} />,
       title: 'Comprehensive Maintenance & Support',
+      image: maintenanceImg,
       description: 'Full-service preventive and corrective maintenance for all systems',
       features: [
         'Regular Maintenance Programs',
@@ -71,6 +82,7 @@ const Services = () => {
     {
       icon: <Settings size={48} />,
       title: 'System Integration & Optimization',
+      image: integrationImg,
       description: 'End-to-end integration of all systems for maximum production efficiency',
       features: [
         'Multi-System Coordination',
@@ -94,6 +106,16 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Mobile vertical menu (visible on small screens) */}
+      <nav className="md:hidden py-4 px-4">
+        <div className="flex flex-col space-y-2">
+          <a href="#material-handling" className="flex items-center p-3 rounded-lg bg-white/90 shadow-md text-sm font-semibold">📦 Material Handling Systems</a>
+          <a href="#system-integration" className="flex items-center p-3 rounded-lg bg-white/90 shadow-md text-sm font-semibold">🤖 System Integration & Automation</a>
+          <a href="#belting-solutions" className="flex items-center p-3 rounded-lg bg-white/90 shadow-md text-sm font-semibold">🎯 Complete Belting Solution</a>
+          <a href="#industrial-rollers" className="flex items-center p-3 rounded-lg bg-white/90 shadow-md text-sm font-semibold">⚙️ Industrial Solution</a>
+        </div>
+      </nav>
+
       {/* Services Grid */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -101,24 +123,29 @@ const Services = () => {
             {services.map((service, idx) => (
               <div
                 key={idx}
-                className={`rounded-xl p-8 hover:shadow-2xl transition-all duration-300 card-hover ${
-                  service.category ? 'bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-400' : 'bg-gray-50'
-                }`}
+                id={service.category?.includes('MATERIAL') ? 'material-handling' : service.category?.includes('SYSTEM') ? 'system-integration' : service.category?.includes('BELTING') ? 'belting-solutions' : service.category?.includes('ROLLERS') ? 'industrial-rollers' : undefined}
+                className={`relative overflow-hidden rounded-xl p-8 hover:shadow-2xl transition-all duration-300 card-hover bg-cover bg-center bg-no-repeat`}
+                style={{ backgroundImage: service.image ? `url(${service.image})` : undefined }}
               >
-                {service.category && (
-                  <div className="text-blue-700 text-sm font-bold mb-3">{service.category}</div>
-                )}
-                <div className="text-blue-600 mb-6">{service.icon}</div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-6">{service.description}</p>
-                <ul className="space-y-3">
-                  {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-start space-x-3">
-                      <span className="text-blue-600 mt-1 text-xl">✓</span>
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                <div className="relative z-10 text-white h-full flex flex-col justify-between">
+                  <div>
+                    {service.category && (
+                      <div className="text-blue-200 text-sm font-bold mb-3">{service.category}</div>
+                    )}
+                    <div className="text-white mb-6">{service.icon}</div>
+                    <h3 className="text-3xl font-bold mb-2">{service.title}</h3>
+                    <p className="text-white/90 mb-4">{service.description}</p>
+                  </div>
+                  <ul className="space-y-1">
+                    {service.features.map((feature, i) => (
+                      <li key={i} className="flex items-start space-x-3 text-white/90 text-sm">
+                        <span className="text-white mt-0.5">✓</span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </div>

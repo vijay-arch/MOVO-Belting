@@ -12,6 +12,7 @@ import aluminumBeltImg from '../assets/aluminum-belt-conveyor.jpeg';
 import rubberConveyor01Img from '../assets/rubber_conveyor01.jpeg';
 import rubberConveyor02Img from '../assets/rubber_conveyor02.jpeg';
 import rubberConveyor03Img from '../assets/rubber_conveyor03.jpeg';
+import rubberConveyor04Img from '../assets/rubber_mining_front.jpeg';
 
 // Material Handling Systems - Roller Conveyors
 import freeRollerImg from '../assets/free-roller-conveyor.jpeg';
@@ -460,8 +461,8 @@ const Products = () => {
         {
           id: 100,
           name: 'Rubber Conveyor System for Mining',
-          image: rubberConveyor03Img,
-          images: [rubberConveyor03Img , rubberConveyor02Img, rubberConveyor01Img],
+          image: rubberConveyor04Img ,
+          images: [rubberConveyor04Img ,rubberConveyor03Img , rubberConveyor02Img, rubberConveyor01Img],
           description: 'A robust, high-capacity rubber conveyor engineered specifically for mining operations and bulk material transfer. Combines reinforced carcass construction, abrasion-resistant rubber compounds, large-diameter pulleys and heavy-duty idlers to ensure long service life in harsh environments.',
           specs: [
             'Reinforced carcass with multiple plies',
@@ -3639,18 +3640,18 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Horizontal Category Tabs */}
+      {/* Category Menu (Vertical) */}
       <div className="bg-gradient-to-r from-gray-50 to-white shadow-xl sticky top-20 z-40 border-b-2 border-gray-200">
         <div className="container mx-auto px-4">
-          <div className="flex justify-center gap-4 py-0">
+          <div className="flex flex-col items-start gap-3 py-4">
             <button
               onClick={() => {
                 setExpandedCategory('material-handling');
                 setExpandedSubcategory(null);
               }}
-              className={`px-8 py-4 font-bold text-lg transition-all duration-300 border-b-4 ${
+              className={`w-full text-left px-4 py-3 font-bold text-lg transition-all duration-300 border-l-4 ${
                 expandedCategory === 'material-handling'
-                  ? 'text-white border-blue-700 bg-blue-700 shadow-md rounded-t-lg'
+                  ? 'text-white border-blue-700 bg-blue-700 shadow-md rounded-l-lg'
                   : 'text-gray-600 border-transparent hover:text-blue-600 hover:bg-blue-100'
               }`}
             >
@@ -3661,9 +3662,9 @@ const Products = () => {
                 setExpandedCategory('automation');
                 setExpandedSubcategory(null);
               }}
-              className={`px-8 py-4 font-bold text-lg transition-all duration-300 border-b-4 ${
+              className={`w-full text-left px-4 py-3 font-bold text-lg transition-all duration-300 border-l-4 ${
                 expandedCategory === 'automation'
-                  ? 'text-white border-blue-700 bg-blue-700 shadow-md rounded-t-lg'
+                  ? 'text-white border-blue-700 bg-blue-700 shadow-md rounded-l-lg'
                   : 'text-gray-600 border-transparent hover:text-blue-600 hover:bg-blue-100'
               }`}
             >
@@ -3674,9 +3675,9 @@ const Products = () => {
                 setExpandedCategory('belting');
                 setExpandedSubcategory(null);
               }}
-              className={`px-8 py-4 font-bold text-lg transition-all duration-300 border-b-4 ${
+              className={`w-full text-left px-4 py-3 font-bold text-lg transition-all duration-300 border-l-4 ${
                 expandedCategory === 'belting'
-                  ? 'text-white border-blue-700 bg-blue-700 shadow-md rounded-t-lg'
+                  ? 'text-white border-blue-700 bg-blue-700 shadow-md rounded-l-lg'
                   : 'text-gray-600 border-transparent hover:text-blue-600 hover:bg-blue-100'
               }`}
             >
@@ -3687,9 +3688,9 @@ const Products = () => {
                 setExpandedCategory('industrial-rollers');
                 setExpandedSubcategory(null);
               }}
-              className={`px-8 py-4 font-bold text-lg transition-all duration-300 border-b-4 ${
+              className={`w-full text-left px-4 py-3 font-bold text-lg transition-all duration-300 border-l-4 ${
                 expandedCategory === 'industrial-rollers'
-                  ? 'text-white border-orange-700 bg-orange-700 shadow-md rounded-t-lg'
+                  ? 'text-white border-orange-700 bg-orange-700 shadow-md rounded-l-lg'
                   : 'text-gray-600 border-transparent hover:text-orange-600 hover:bg-orange-100'
               }`}
             >
