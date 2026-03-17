@@ -10,7 +10,15 @@ import vegaLogo from '../assets/vega_logo.jpg';
 import jubilanLogo from '../assets/jubilan_logo.png';
 import ufiLogo from '../assets/ufi_logo.png';
 import adityaaMilkLogo from '../assets/adityaa_milk_logo.png';
+import jpeeLogo from '../assets/jpee_logo.jpeg';
+import syngentaLogo from '../assets/syngenta_logo.png';
+import parleLogo from '../assets/parle_logo.png';
+import cdeLogo from '../assets/cde_logo.png';
+import knkKartsLogo from '../assets/knk_karts_logo.jpg';
+import tahmarLogo from '../assets/tahmar-logo.png';
+
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { useRef } from 'react';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -47,6 +55,40 @@ const Home = () => {
       features: ['Premium quality construction', 'Extended service life', 'Reduced maintenance costs'],
     },
   ];
+
+  const logos = [
+    itzuLogo,
+    kingsLogo,
+    vegaLogo,
+    jubilanLogo,
+    ufiLogo,
+    adityaaMilkLogo,
+    jpeeLogo,
+    syngentaLogo,
+    parleLogo,
+    cdeLogo,
+    knkKartsLogo,
+    tahmarLogo,
+  ];
+  const half = Math.ceil(logos.length / 2);
+  const row1 = logos.slice(0, half);
+  const row2 = logos.slice(half);
+  const marquee1Ref = useRef(null);
+  const marquee2Ref = useRef(null);
+
+  useEffect(() => {
+    // Measure the width of the duplicated track and set --marquee-width to one copy's width (half)
+    if (marquee1Ref.current) {
+      const total = marquee1Ref.current.scrollWidth || 0;
+      const single = Math.floor(total / 2);
+      marquee1Ref.current.style.setProperty('--marquee-width', `${single}px`);
+    }
+    if (marquee2Ref.current) {
+      const total2 = marquee2Ref.current.scrollWidth || 0;
+      const single2 = Math.floor(total2 / 2);
+      marquee2Ref.current.style.setProperty('--marquee-width', `${single2}px`);
+    }
+  }, [row1.length, row2.length]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -269,36 +311,34 @@ With deep expertise in conveyor technology and system integration, we provide cu
 
       {/* Clients / Served Companies (Marquee) */}
       <section className="py-12 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-6">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">Our Served Clients</h2>
-            <p className="text-gray-600">Trusted partners across industries</p>
-          </div>
-
-          <div className="overflow-hidden">
-            <div className="animate-marquee">
-              {[
-                itzuLogo,
-                kingsLogo,
-                vegaLogo,
-                jubilanLogo,
-                ufiLogo,
-                adityaaMilkLogo,
-              ].concat([
-                itzuLogo,
-                kingsLogo,
-                vegaLogo,
-                jubilanLogo,
-                ufiLogo,
-                adityaaMilkLogo,
-              ]).map((logo, idx) => (
-                <div key={idx} className="marquee-item flex-shrink-0 w-32 md:w-40 lg:w-48 flex items-center justify-center">
-                  <img src={logo} alt={`client-${idx}`} className="max-h-12 md:max-h-16 lg:max-h-20 object-contain" />
-                </div>
-              ))}
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-6">
+                <h2 className="text-3xl font-bold text-gray-900 mb-2">Our Served Clients</h2>
+                <p className="text-gray-600">Trusted partners across industries</p>
+              </div>
             </div>
-          </div>
-        </div>
+
+            <div className="w-full overflow-hidden px-4 space-y-4">
+              <div className="overflow-hidden">
+                <div ref={marquee1Ref} className="animate-marquee" style={{ animationDuration: '10s' }}>
+                  {row1.concat(row1).map((logo, idx) => (
+                    <div key={`r1-${idx}`} className="marquee-item flex-shrink-0 w-32 md:w-36 lg:w-40 flex items-center justify-center">
+                      <img src={logo} alt={`client-${idx}`} className="max-h-16 md:max-h-20 lg:max-h-24 object-contain" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="overflow-hidden">
+                <div ref={marquee2Ref} className="animate-marquee animate-marquee-reverse" style={{ animationDuration: '9s' }}>
+                  {row2.concat(row2).map((logo, idx) => (
+                    <div key={`r2-${idx}`} className="marquee-item flex-shrink-0 w-32 md:w-36 lg:w-40 flex items-center justify-center">
+                      <img src={logo} alt={`client-2-${idx}`} className="max-h-16 md:max-h-20 lg:max-h-24 object-contain" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
       </section>
 
       {/* CTA Section */}

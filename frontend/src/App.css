@@ -96,15 +96,22 @@ html {
 /* Client logos marquee */
 @keyframes marquee {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(calc(var(--marquee-width) * -1)); }
 }
 
 .animate-marquee {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   will-change: transform;
-  animation: marquee 20s linear infinite;
+  /* faster marquee motion */
+  animation: marquee 8s linear infinite;
+}
+
+.animate-marquee-reverse {
+  /* same animation but reversed direction and slightly different duration */
+  animation-direction: reverse;
+  animation-duration: 9s;
 }
 
 .marquee-item {
