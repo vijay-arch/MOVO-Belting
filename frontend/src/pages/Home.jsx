@@ -16,6 +16,8 @@ import parleLogo from '../assets/parle_logo.png';
 import cdeLogo from '../assets/cde_logo.png';
 import knkKartsLogo from '../assets/knk_karts_logo.jpg';
 import tahmarLogo from '../assets/tahmar-logo.png';
+import sandurLogo from '../assets/sandur_logo.png';
+import sfsLogo from '../assets/sfs_logo.png';
 
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { useRef } from 'react';
@@ -69,6 +71,8 @@ const Home = () => {
     cdeLogo,
     knkKartsLogo,
     tahmarLogo,
+    sandurLogo,
+    sfsLogo,
   ];
   const half = Math.ceil(logos.length / 2);
   const row1 = logos.slice(0, half);
@@ -320,7 +324,7 @@ With deep expertise in conveyor technology and system integration, we provide cu
 
             <div className="w-full overflow-hidden px-4 space-y-4">
               <div className="overflow-hidden">
-                <div ref={marquee1Ref} className="animate-marquee" style={{ animationDuration: '10s' }}>
+                <div ref={marquee1Ref} className="animate-marquee" style={{ animationDuration: '20s' }}>
                   {row1.concat(row1).map((logo, idx) => (
                     <div key={`r1-${idx}`} className="marquee-item flex-shrink-0 w-32 md:w-36 lg:w-40 flex items-center justify-center">
                       <img src={logo} alt={`client-${idx}`} className="max-h-16 md:max-h-20 lg:max-h-24 object-contain" />
@@ -330,7 +334,7 @@ With deep expertise in conveyor technology and system integration, we provide cu
               </div>
 
               <div className="overflow-hidden">
-                <div ref={marquee2Ref} className="animate-marquee animate-marquee-reverse" style={{ animationDuration: '9s' }}>
+                <div ref={marquee2Ref} className="animate-marquee animate-marquee-reverse" style={{ animationDuration: '20s' }}>
                   {row2.concat(row2).map((logo, idx) => (
                     <div key={`r2-${idx}`} className="marquee-item flex-shrink-0 w-32 md:w-36 lg:w-40 flex items-center justify-center">
                       <img src={logo} alt={`client-2-${idx}`} className="max-h-16 md:max-h-20 lg:max-h-24 object-contain" />
